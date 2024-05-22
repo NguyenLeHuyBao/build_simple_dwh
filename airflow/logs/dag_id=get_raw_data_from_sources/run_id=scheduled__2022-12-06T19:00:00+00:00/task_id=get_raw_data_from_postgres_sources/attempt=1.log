@@ -1,0 +1,31 @@
+[2022-12-08T03:19:30.894+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources scheduled__2022-12-06T19:00:00+00:00 [queued]>
+[2022-12-08T03:19:30.904+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources scheduled__2022-12-06T19:00:00+00:00 [queued]>
+[2022-12-08T03:19:30.905+0000] {taskinstance.py:1362} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-08T03:19:30.906+0000] {taskinstance.py:1363} INFO - 🤪 Starting attempt 1 of 4
+[2022-12-08T03:19:30.907+0000] {taskinstance.py:1364} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-08T03:19:30.921+0000] {taskinstance.py:1383} INFO - 🤪 Executing <Task(PythonOperator): get_raw_data_from_postgres_sources> on 2022-12-06 19:00:00+00:00
+[2022-12-08T03:19:30.924+0000] {standard_task_runner.py:55} INFO - 🤪 Started process 74 to run task
+[2022-12-08T03:19:30.929+0000] {standard_task_runner.py:82} INFO - 🤪 Running: ['airflow', 'tasks', 'run', 'get_raw_data_from_sources', 'get_raw_data_from_postgres_sources', 'scheduled__2022-12-06T19:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/ingest_dwh_daily.py', '--cfg-path', '/tmp/tmp8jevf7sx']
+[2022-12-08T03:19:30.930+0000] {standard_task_runner.py:83} INFO - 🤪 Job 3: Subtask get_raw_data_from_postgres_sources
+[2022-12-08T03:19:30.979+0000] {task_command.py:376} INFO - 🤪 Running <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources scheduled__2022-12-06T19:00:00+00:00 [running]> on host a249d6482057
+[2022-12-08T03:19:31.034+0000] {taskinstance.py:1590} INFO - 🤪 Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=gp.data@galaxy.com.vn
+AIRFLOW_CTX_DAG_OWNER=data_team
+AIRFLOW_CTX_DAG_ID=get_raw_data_from_sources
+AIRFLOW_CTX_TASK_ID=get_raw_data_from_postgres_sources
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-06T19:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-06T19:00:00+00:00
+[2022-12-08T03:19:31.045+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Postgres - Table: users
+[2022-12-08T03:19:31.054+0000] {logging_mixin.py:137} INFO - 🤪 Found 100 records need to be inserted
+[2022-12-08T03:19:31.054+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Postgres to DW - Table: users
+[2022-12-08T03:19:31.063+0000] {logging_mixin.py:137} INFO - 🤪 Error: relation "users" does not exist
+LINE 1: INSERT INTO users(user_id,name,email,mobile,location) VALUES...
+                    ^
+[2022-12-08T03:19:31.064+0000] {logging_mixin.py:137} INFO - 🤪 Finished ingesting data from source to DW - Table: users
+[2022-12-08T03:19:31.065+0000] {python.py:177} INFO - 🤪 Done. Returned value was: None
+[2022-12-08T03:19:31.073+0000] {taskinstance.py:1401} INFO - 🤪 Marking task as SUCCESS. dag_id=get_raw_data_from_sources, task_id=get_raw_data_from_postgres_sources, execution_date=20221206T190000, start_date=20221208T031930, end_date=20221208T031931
+[2022-12-08T03:19:31.101+0000] {local_task_job.py:159} INFO - 🤪 Task exited with return code 0
+[2022-12-08T03:19:31.122+0000] {taskinstance.py:2623} INFO - 🤪 0 downstream tasks scheduled from follow-on schedule check

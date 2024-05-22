@@ -1,0 +1,66 @@
+[2022-12-08T08:16:54.353+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_mysql_sources manual__2022-12-08T04:31:43.436571+00:00 [queued]>
+[2022-12-08T08:16:54.361+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_mysql_sources manual__2022-12-08T04:31:43.436571+00:00 [queued]>
+[2022-12-08T08:16:54.362+0000] {taskinstance.py:1362} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-08T08:16:54.363+0000] {taskinstance.py:1363} INFO - 🤪 Starting attempt 2 of 5
+[2022-12-08T08:16:54.363+0000] {taskinstance.py:1364} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-08T08:16:54.375+0000] {taskinstance.py:1383} INFO - 🤪 Executing <Task(PythonOperator): get_raw_data_from_mysql_sources> on 2022-12-08 04:31:43.436571+00:00
+[2022-12-08T08:16:54.379+0000] {standard_task_runner.py:55} INFO - 🤪 Started process 1611 to run task
+[2022-12-08T08:16:54.383+0000] {standard_task_runner.py:82} INFO - 🤪 Running: ['airflow', 'tasks', 'run', 'get_raw_data_from_sources', 'get_raw_data_from_mysql_sources', 'manual__2022-12-08T04:31:43.436571+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/ingest_dwh_daily.py', '--cfg-path', '/tmp/tmpj657e678']
+[2022-12-08T08:16:54.384+0000] {standard_task_runner.py:83} INFO - 🤪 Job 18: Subtask get_raw_data_from_mysql_sources
+[2022-12-08T08:16:54.434+0000] {task_command.py:376} INFO - 🤪 Running <TaskInstance: get_raw_data_from_sources.get_raw_data_from_mysql_sources manual__2022-12-08T04:31:43.436571+00:00 [running]> on host a249d6482057
+[2022-12-08T08:16:54.484+0000] {taskinstance.py:1590} INFO - 🤪 Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=gp.data@galaxy.com.vn
+AIRFLOW_CTX_DAG_OWNER=data_team
+AIRFLOW_CTX_DAG_ID=get_raw_data_from_sources
+AIRFLOW_CTX_TASK_ID=get_raw_data_from_mysql_sources
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-08T04:31:43.436571+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-08T04:31:43.436571+00:00
+[2022-12-08T08:16:54.495+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Mysql - Table: users
+[2022-12-08T08:16:54.502+0000] {logging_mixin.py:137} INFO - 🤪 Found 100 records need to be inserted
+[2022-12-08T08:16:54.503+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Mysql to DW - Table: users
+[2022-12-08T08:16:54.516+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-08T08:16:54.518+0000] {logging_mixin.py:137} INFO - 🤪 Finished ingesting data from source to DW - Table: users
+[2022-12-08T08:16:54.519+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Mysql - Table: orders
+[2022-12-08T08:16:54.524+0000] {logging_mixin.py:137} INFO - 🤪 Found 100 records need to be inserted
+[2022-12-08T08:16:54.525+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Mysql to DW - Table: orders
+[2022-12-08T08:16:54.534+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-08T08:16:54.535+0000] {logging_mixin.py:137} INFO - 🤪 Finished ingesting data from source to DW - Table: orders
+[2022-12-08T08:16:54.536+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Mysql - Table: transactions
+[2022-12-08T08:16:54.539+0000] {taskinstance.py:1851} ERROR - 🤪 Task failed with exception
+Traceback (most recent call last):
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/airflow/dags/processing/ingest_mysql_source.py", line 60, in ingest_mysql_source
+    data = extract_data_from_source(mysql_handler=mysql_handler,
+  File "/airflow/dags/processing/ingest_mysql_source.py", line 11, in extract_data_from_source
+    data = mysql_handler.action_db(query_str=sql_query, action='select')
+  File "/airflow/dags/db_handler/mysql_handler.py", line 67, in action_db
+    return self._get_data(query_str)
+  File "/airflow/dags/db_handler/mysql_handler.py", line 30, in _get_data
+    cur.execute(query_str)
+  File "/opt/bitnami/python/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/opt/bitnami/python/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/opt/bitnami/python/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/opt/bitnami/python/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/opt/bitnami/python/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/opt/bitnami/python/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/opt/bitnami/python/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/opt/bitnami/python/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'paid_' in 'field list'")
+[2022-12-08T08:16:54.553+0000] {taskinstance.py:1401} INFO - 🤪 Marking task as UP_FOR_RETRY. dag_id=get_raw_data_from_sources, task_id=get_raw_data_from_mysql_sources, execution_date=20221208T043143, start_date=20221208T081654, end_date=20221208T081654
+[2022-12-08T08:16:54.567+0000] {standard_task_runner.py:100} ERROR - 🤪 Failed to execute job 18 for task get_raw_data_from_mysql_sources ((1054, "Unknown column 'paid_' in 'field list'"); 1611)
+[2022-12-08T08:16:54.596+0000] {local_task_job.py:159} INFO - 🤪 Task exited with return code 1
+[2022-12-08T08:16:54.614+0000] {taskinstance.py:2623} INFO - 🤪 0 downstream tasks scheduled from follow-on schedule check

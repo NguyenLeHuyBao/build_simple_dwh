@@ -1,0 +1,40 @@
+[2022-12-05T07:33:32.385+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources scheduled__2022-12-03T19:00:00+00:00 [queued]>
+[2022-12-05T07:33:32.395+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources scheduled__2022-12-03T19:00:00+00:00 [queued]>
+[2022-12-05T07:33:32.396+0000] {taskinstance.py:1362} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-05T07:33:32.397+0000] {taskinstance.py:1363} INFO - 🤪 Starting attempt 4 of 4
+[2022-12-05T07:33:32.397+0000] {taskinstance.py:1364} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-05T07:33:32.411+0000] {taskinstance.py:1383} INFO - 🤪 Executing <Task(PythonOperator): get_raw_data_from_postgres_sources> on 2022-12-03 19:00:00+00:00
+[2022-12-05T07:33:32.415+0000] {standard_task_runner.py:55} INFO - 🤪 Started process 737 to run task
+[2022-12-05T07:33:32.418+0000] {standard_task_runner.py:82} INFO - 🤪 Running: ['airflow', 'tasks', 'run', 'get_raw_data_from_sources', 'get_raw_data_from_postgres_sources', 'scheduled__2022-12-03T19:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/ingest_dwh_daily.py', '--cfg-path', '/tmp/tmpw7adthh3']
+[2022-12-05T07:33:32.420+0000] {standard_task_runner.py:83} INFO - 🤪 Job 9: Subtask get_raw_data_from_postgres_sources
+[2022-12-05T07:33:32.468+0000] {task_command.py:376} INFO - 🤪 Running <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources scheduled__2022-12-03T19:00:00+00:00 [running]> on host 2387a8df1781
+[2022-12-05T07:33:32.518+0000] {taskinstance.py:1590} INFO - 🤪 Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=gp.data@galaxy.com.vn
+AIRFLOW_CTX_DAG_OWNER=data_team
+AIRFLOW_CTX_DAG_ID=get_raw_data_from_sources
+AIRFLOW_CTX_TASK_ID=get_raw_data_from_postgres_sources
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-03T19:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=4
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-03T19:00:00+00:00
+[2022-12-05T07:33:32.530+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source - Table: users
+[2022-12-05T07:33:32.536+0000] {logging_mixin.py:137} INFO - 🤪 Found
+[2022-12-05T07:33:32.537+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source to DW - Table: users
+[2022-12-05T07:33:32.538+0000] {taskinstance.py:1851} ERROR - 🤪 Task failed with exception
+Traceback (most recent call last):
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/airflow/dags/processing/ingest_psql_source.py", line 27, in ingest_psql_source
+    postgres_handler.action_db('insert', df, table)
+  File "/airflow/dags/db_handler/postgres_handler.py", line 86, in action_db
+    if action == 'select':
+  File "/opt/bitnami/python/lib/python3.8/site-packages/pandas/core/generic.py", line 1527, in __nonzero__
+    raise ValueError(
+ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+[2022-12-05T07:33:32.547+0000] {taskinstance.py:1401} INFO - 🤪 Marking task as FAILED. dag_id=get_raw_data_from_sources, task_id=get_raw_data_from_postgres_sources, execution_date=20221203T190000, start_date=20221205T073332, end_date=20221205T073332
+[2022-12-05T07:33:32.562+0000] {standard_task_runner.py:100} ERROR - 🤪 Failed to execute job 9 for task get_raw_data_from_postgres_sources (The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().; 737)
+[2022-12-05T07:33:32.591+0000] {local_task_job.py:159} INFO - 🤪 Task exited with return code 1
+[2022-12-05T07:33:32.605+0000] {taskinstance.py:2623} INFO - 🤪 0 downstream tasks scheduled from follow-on schedule check

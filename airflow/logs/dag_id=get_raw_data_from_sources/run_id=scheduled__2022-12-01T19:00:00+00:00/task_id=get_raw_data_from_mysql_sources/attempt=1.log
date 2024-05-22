@@ -1,0 +1,40 @@
+[2022-12-03T12:05:09.496+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_mysql_sources scheduled__2022-12-01T19:00:00+00:00 [queued]>
+[2022-12-03T12:05:09.506+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_mysql_sources scheduled__2022-12-01T19:00:00+00:00 [queued]>
+[2022-12-03T12:05:09.507+0000] {taskinstance.py:1362} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-03T12:05:09.508+0000] {taskinstance.py:1363} INFO - 🤪 Starting attempt 1 of 4
+[2022-12-03T12:05:09.508+0000] {taskinstance.py:1364} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-03T12:05:09.525+0000] {taskinstance.py:1383} INFO - 🤪 Executing <Task(PythonOperator): get_raw_data_from_mysql_sources> on 2022-12-01 19:00:00+00:00
+[2022-12-03T12:05:09.530+0000] {standard_task_runner.py:55} INFO - 🤪 Started process 202 to run task
+[2022-12-03T12:05:09.535+0000] {standard_task_runner.py:82} INFO - 🤪 Running: ['airflow', 'tasks', 'run', 'get_raw_data_from_sources', 'get_raw_data_from_mysql_sources', 'scheduled__2022-12-01T19:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/get_data_from_sources.py', '--cfg-path', '/tmp/tmpa715iqpl']
+[2022-12-03T12:05:09.537+0000] {standard_task_runner.py:83} INFO - 🤪 Job 3: Subtask get_raw_data_from_mysql_sources
+[2022-12-03T12:05:09.601+0000] {task_command.py:376} INFO - 🤪 Running <TaskInstance: get_raw_data_from_sources.get_raw_data_from_mysql_sources scheduled__2022-12-01T19:00:00+00:00 [running]> on host d5f31096a69d
+[2022-12-03T12:05:09.668+0000] {taskinstance.py:1590} INFO - 🤪 Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=gp.data@galaxy.com.vn
+AIRFLOW_CTX_DAG_OWNER=data_team
+AIRFLOW_CTX_DAG_ID=get_raw_data_from_sources
+AIRFLOW_CTX_TASK_ID=get_raw_data_from_mysql_sources
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-01T19:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-01T19:00:00+00:00
+[2022-12-03T12:05:09.670+0000] {logging_mixin.py:137} INFO - 🤪 Connecting to the PostgreSQL database...
+[2022-12-03T12:05:09.679+0000] {logging_mixin.py:137} INFO - 🤪 relation "report.users" does not exist
+LINE 1: SELECT user_id, name, email, mobile FROM report.users
+                                                 ^
+[2022-12-03T12:05:09.680+0000] {logging_mixin.py:137} INFO - 🤪 Database connection closed.
+[2022-12-03T12:05:09.685+0000] {taskinstance.py:1851} ERROR - 🤪 Task failed with exception
+Traceback (most recent call last):
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/airflow/dags/controller/get_raw_data_from_mysql_source.py", line 36, in get_raw_data_from_mysql_source
+    execute_values(conn, data, table)
+  File "/airflow/dags/controller/source_controller.py", line 8, in execute_values
+    tuples = [tuple(x) for x in df.to_numpy()]
+AttributeError: 'NoneType' object has no attribute 'to_numpy'
+[2022-12-03T12:05:09.695+0000] {taskinstance.py:1401} INFO - 🤪 Marking task as UP_FOR_RETRY. dag_id=get_raw_data_from_sources, task_id=get_raw_data_from_mysql_sources, execution_date=20221201T190000, start_date=20221203T120509, end_date=20221203T120509
+[2022-12-03T12:05:09.707+0000] {standard_task_runner.py:100} ERROR - 🤪 Failed to execute job 3 for task get_raw_data_from_mysql_sources ('NoneType' object has no attribute 'to_numpy'; 202)
+[2022-12-03T12:05:09.749+0000] {local_task_job.py:159} INFO - 🤪 Task exited with return code 1
+[2022-12-03T12:05:09.766+0000] {taskinstance.py:2623} INFO - 🤪 0 downstream tasks scheduled from follow-on schedule check

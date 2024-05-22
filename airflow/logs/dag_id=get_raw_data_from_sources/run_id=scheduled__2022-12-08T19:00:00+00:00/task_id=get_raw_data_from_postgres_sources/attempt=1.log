@@ -1,0 +1,132 @@
+[2022-12-09T19:00:04.044+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources scheduled__2022-12-08T19:00:00+00:00 [queued]>
+[2022-12-09T19:00:04.053+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources scheduled__2022-12-08T19:00:00+00:00 [queued]>
+[2022-12-09T19:00:04.054+0000] {taskinstance.py:1362} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-09T19:00:04.055+0000] {taskinstance.py:1363} INFO - 🤪 Starting attempt 1 of 4
+[2022-12-09T19:00:04.056+0000] {taskinstance.py:1364} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-09T19:00:04.070+0000] {taskinstance.py:1383} INFO - 🤪 Executing <Task(PythonOperator): get_raw_data_from_postgres_sources> on 2022-12-08 19:00:00+00:00
+[2022-12-09T19:00:04.074+0000] {standard_task_runner.py:55} INFO - 🤪 Started process 538 to run task
+[2022-12-09T19:00:04.078+0000] {standard_task_runner.py:82} INFO - 🤪 Running: ['airflow', 'tasks', 'run', 'get_raw_data_from_sources', 'get_raw_data_from_postgres_sources', 'scheduled__2022-12-08T19:00:00+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/ingest_dwh_daily.py', '--cfg-path', '/tmp/tmp5s0soawk']
+[2022-12-09T19:00:04.080+0000] {standard_task_runner.py:83} INFO - 🤪 Job 18: Subtask get_raw_data_from_postgres_sources
+[2022-12-09T19:00:04.137+0000] {task_command.py:376} INFO - 🤪 Running <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources scheduled__2022-12-08T19:00:00+00:00 [running]> on host 31f0fd0ea32a
+[2022-12-09T19:00:04.206+0000] {taskinstance.py:1590} INFO - 🤪 Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=gp.data@galaxy.com.vn
+AIRFLOW_CTX_DAG_OWNER=data_team
+AIRFLOW_CTX_DAG_ID=get_raw_data_from_sources
+AIRFLOW_CTX_TASK_ID=get_raw_data_from_postgres_sources
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-08T19:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-08T19:00:00+00:00
+[2022-12-09T19:00:04.219+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Postgres - Table: users
+[2022-12-09T19:00:04.227+0000] {logging_mixin.py:137} INFO - 🤪 Found 100 records need to be inserted
+[2022-12-09T19:00:04.228+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Postgres to DW - Table: users
+[2022-12-09T19:00:04.238+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-09T19:00:04.239+0000] {logging_mixin.py:137} INFO - 🤪 Finished ingesting data from source to DW - Table: users
+[2022-12-09T19:00:04.240+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Postgres - Table: orders
+[2022-12-09T19:00:04.245+0000] {logging_mixin.py:137} INFO - 🤪 Found 0 records need to be inserted
+[2022-12-09T19:00:04.246+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Postgres to DW - Table: orders
+[2022-12-09T19:00:04.247+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-09T19:00:04.248+0000] {logging_mixin.py:137} INFO - 🤪 Finished ingesting data from source to DW - Table: orders
+[2022-12-09T19:00:04.248+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Postgres - Table: transactions
+[2022-12-09T19:00:04.252+0000] {logging_mixin.py:137} INFO - 🤪 Found 0 records need to be inserted
+[2022-12-09T19:00:04.253+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Postgres to DW - Table: transactions
+[2022-12-09T19:00:04.254+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-09T19:00:04.256+0000] {logging_mixin.py:137} INFO - 🤪 Finished ingesting data from source to DW - Table: transactions
+[2022-12-09T19:00:04.257+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Postgres - Table: menus
+[2022-12-09T19:00:04.260+0000] {logging_mixin.py:137} INFO - 🤪 Found 0 records need to be inserted
+[2022-12-09T19:00:04.262+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Postgres to DW - Table: menus
+[2022-12-09T19:00:04.265+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-09T19:00:04.266+0000] {logging_mixin.py:137} INFO - 🤪 Finished ingesting data from source to DW - Table: menus
+[2022-12-09T19:00:04.268+0000] {python.py:177} INFO - 🤪 Done. Returned value was: None
+[2022-12-09T19:00:04.294+0000] {taskinstance.py:1401} INFO - 🤪 Marking task as SUCCESS. dag_id=get_raw_data_from_sources, task_id=get_raw_data_from_postgres_sources, execution_date=20221208T190000, start_date=20221209T190004, end_date=20221209T190004
+[2022-12-09T19:00:04.332+0000] {local_task_job.py:159} INFO - 🤪 Task exited with return code 0
+[2022-12-09T19:00:04.348+0000] {taskinstance.py:2623} INFO - 🤪 0 downstream tasks scheduled from follow-on schedule check
+[2022-12-10T11:45:53.088+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources scheduled__2022-12-08T19:00:00+00:00 [queued]>
+[2022-12-10T11:45:53.096+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources scheduled__2022-12-08T19:00:00+00:00 [queued]>
+[2022-12-10T11:45:53.097+0000] {taskinstance.py:1362} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-10T11:45:53.098+0000] {taskinstance.py:1363} INFO - 🤪 Starting attempt 1 of 4
+[2022-12-10T11:45:53.099+0000] {taskinstance.py:1364} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-10T11:45:53.113+0000] {taskinstance.py:1383} INFO - 🤪 Executing <Task(PythonOperator): get_raw_data_from_postgres_sources> on 2022-12-08 19:00:00+00:00
+[2022-12-10T11:45:53.117+0000] {standard_task_runner.py:55} INFO - 🤪 Started process 1163 to run task
+[2022-12-10T11:45:53.123+0000] {standard_task_runner.py:82} INFO - 🤪 Running: ['airflow', 'tasks', 'run', 'get_raw_data_from_sources', 'get_raw_data_from_postgres_sources', 'scheduled__2022-12-08T19:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/ingest_dwh_daily.py', '--cfg-path', '/tmp/tmp6elpc5yk']
+[2022-12-10T11:45:53.125+0000] {standard_task_runner.py:83} INFO - 🤪 Job 9: Subtask get_raw_data_from_postgres_sources
+[2022-12-10T11:45:53.198+0000] {task_command.py:376} INFO - 🤪 Running <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources scheduled__2022-12-08T19:00:00+00:00 [running]> on host f9163ca376ce
+[2022-12-10T11:45:53.282+0000] {taskinstance.py:1590} INFO - 🤪 Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=gp.data@galaxy.com.vn
+AIRFLOW_CTX_DAG_OWNER=data_team
+AIRFLOW_CTX_DAG_ID=get_raw_data_from_sources
+AIRFLOW_CTX_TASK_ID=get_raw_data_from_postgres_sources
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-08T19:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-08T19:00:00+00:00
+[2022-12-10T11:45:53.300+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Postgres - Table: users
+[2022-12-10T11:45:53.312+0000] {logging_mixin.py:137} INFO - 🤪 Found 100 records need to be inserted
+[2022-12-10T11:45:53.313+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Postgres to DW - Table: users
+[2022-12-10T11:45:53.330+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-10T11:45:53.331+0000] {logging_mixin.py:137} INFO - 🤪 Finished ingesting data from source to DW - Table: users
+[2022-12-10T11:45:53.331+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Postgres - Table: orders
+[2022-12-10T11:45:53.340+0000] {logging_mixin.py:137} INFO - 🤪 Found 0 records need to be inserted
+[2022-12-10T11:45:53.341+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Postgres to DW - Table: orders
+[2022-12-10T11:45:53.342+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-10T11:45:53.343+0000] {logging_mixin.py:137} INFO - 🤪 Finished ingesting data from source to DW - Table: orders
+[2022-12-10T11:45:53.344+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Postgres - Table: transactions
+[2022-12-10T11:45:53.347+0000] {logging_mixin.py:137} INFO - 🤪 Found 0 records need to be inserted
+[2022-12-10T11:45:53.347+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Postgres to DW - Table: transactions
+[2022-12-10T11:45:53.348+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-10T11:45:53.349+0000] {logging_mixin.py:137} INFO - 🤪 Finished ingesting data from source to DW - Table: transactions
+[2022-12-10T11:45:53.349+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Postgres - Table: menus
+[2022-12-10T11:45:53.352+0000] {logging_mixin.py:137} INFO - 🤪 Found 0 records need to be inserted
+[2022-12-10T11:45:53.352+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Postgres to DW - Table: menus
+[2022-12-10T11:45:53.353+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-10T11:45:53.354+0000] {logging_mixin.py:137} INFO - 🤪 Finished ingesting data from source to DW - Table: menus
+[2022-12-10T11:45:53.355+0000] {python.py:177} INFO - 🤪 Done. Returned value was: None
+[2022-12-10T11:45:53.362+0000] {taskinstance.py:1401} INFO - 🤪 Marking task as SUCCESS. dag_id=get_raw_data_from_sources, task_id=get_raw_data_from_postgres_sources, execution_date=20221208T190000, start_date=20221210T114553, end_date=20221210T114553
+[2022-12-10T11:45:53.416+0000] {local_task_job.py:159} INFO - 🤪 Task exited with return code 0
+[2022-12-10T11:45:53.436+0000] {taskinstance.py:2623} INFO - 🤪 0 downstream tasks scheduled from follow-on schedule check
+[2022-12-10T11:58:01.711+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources scheduled__2022-12-08T19:00:00+00:00 [queued]>
+[2022-12-10T11:58:01.720+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources scheduled__2022-12-08T19:00:00+00:00 [queued]>
+[2022-12-10T11:58:01.721+0000] {taskinstance.py:1362} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-10T11:58:01.722+0000] {taskinstance.py:1363} INFO - 🤪 Starting attempt 1 of 4
+[2022-12-10T11:58:01.723+0000] {taskinstance.py:1364} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-10T11:58:01.737+0000] {taskinstance.py:1383} INFO - 🤪 Executing <Task(PythonOperator): get_raw_data_from_postgres_sources> on 2022-12-08 19:00:00+00:00
+[2022-12-10T11:58:01.741+0000] {standard_task_runner.py:55} INFO - 🤪 Started process 76 to run task
+[2022-12-10T11:58:01.752+0000] {standard_task_runner.py:82} INFO - 🤪 Running: ['airflow', 'tasks', 'run', 'get_raw_data_from_sources', 'get_raw_data_from_postgres_sources', 'scheduled__2022-12-08T19:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/ingest_dwh_daily.py', '--cfg-path', '/tmp/tmpbb8l5b6t']
+[2022-12-10T11:58:01.755+0000] {standard_task_runner.py:83} INFO - 🤪 Job 2: Subtask get_raw_data_from_postgres_sources
+[2022-12-10T11:58:01.856+0000] {task_command.py:376} INFO - 🤪 Running <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources scheduled__2022-12-08T19:00:00+00:00 [running]> on host 06f648095881
+[2022-12-10T11:58:01.920+0000] {taskinstance.py:1590} INFO - 🤪 Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=gp.data@galaxy.com.vn
+AIRFLOW_CTX_DAG_OWNER=data_team
+AIRFLOW_CTX_DAG_ID=get_raw_data_from_sources
+AIRFLOW_CTX_TASK_ID=get_raw_data_from_postgres_sources
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-08T19:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-08T19:00:00+00:00
+[2022-12-10T11:58:01.931+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Postgres - Table: users
+[2022-12-10T11:58:01.941+0000] {logging_mixin.py:137} INFO - 🤪 Found 100 records need to be inserted
+[2022-12-10T11:58:01.942+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Postgres to DW - Table: users
+[2022-12-10T11:58:01.954+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-10T11:58:01.955+0000] {logging_mixin.py:137} INFO - 🤪 Finished ingesting data from source to DW - Table: users
+[2022-12-10T11:58:01.956+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Postgres - Table: orders
+[2022-12-10T11:58:01.961+0000] {logging_mixin.py:137} INFO - 🤪 Found 0 records need to be inserted
+[2022-12-10T11:58:01.962+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Postgres to DW - Table: orders
+[2022-12-10T11:58:01.963+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-10T11:58:01.964+0000] {logging_mixin.py:137} INFO - 🤪 Finished ingesting data from source to DW - Table: orders
+[2022-12-10T11:58:01.964+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Postgres - Table: transactions
+[2022-12-10T11:58:01.967+0000] {logging_mixin.py:137} INFO - 🤪 Found 0 records need to be inserted
+[2022-12-10T11:58:01.968+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Postgres to DW - Table: transactions
+[2022-12-10T11:58:01.969+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-10T11:58:01.969+0000] {logging_mixin.py:137} INFO - 🤪 Finished ingesting data from source to DW - Table: transactions
+[2022-12-10T11:58:01.970+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Postgres - Table: menus
+[2022-12-10T11:58:01.973+0000] {logging_mixin.py:137} INFO - 🤪 Found 0 records need to be inserted
+[2022-12-10T11:58:01.974+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Postgres to DW - Table: menus
+[2022-12-10T11:58:01.975+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-10T11:58:01.975+0000] {logging_mixin.py:137} INFO - 🤪 Finished ingesting data from source to DW - Table: menus
+[2022-12-10T11:58:01.977+0000] {python.py:177} INFO - 🤪 Done. Returned value was: None
+[2022-12-10T11:58:01.984+0000] {taskinstance.py:1401} INFO - 🤪 Marking task as SUCCESS. dag_id=get_raw_data_from_sources, task_id=get_raw_data_from_postgres_sources, execution_date=20221208T190000, start_date=20221210T115801, end_date=20221210T115801
+[2022-12-10T11:58:02.003+0000] {local_task_job.py:159} INFO - 🤪 Task exited with return code 0
+[2022-12-10T11:58:02.021+0000] {taskinstance.py:2623} INFO - 🤪 0 downstream tasks scheduled from follow-on schedule check

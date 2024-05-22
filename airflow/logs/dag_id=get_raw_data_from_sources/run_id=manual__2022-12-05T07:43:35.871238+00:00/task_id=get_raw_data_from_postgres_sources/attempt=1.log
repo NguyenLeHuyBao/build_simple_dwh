@@ -1,0 +1,29 @@
+[2022-12-05T08:03:25.711+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources manual__2022-12-05T07:43:35.871238+00:00 [queued]>
+[2022-12-05T08:03:25.733+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources manual__2022-12-05T07:43:35.871238+00:00 [queued]>
+[2022-12-05T08:03:25.735+0000] {taskinstance.py:1362} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-05T08:03:25.737+0000] {taskinstance.py:1363} INFO - 🤪 Starting attempt 1 of 4
+[2022-12-05T08:03:25.739+0000] {taskinstance.py:1364} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-05T08:03:25.778+0000] {taskinstance.py:1383} INFO - 🤪 Executing <Task(PythonOperator): get_raw_data_from_postgres_sources> on 2022-12-05 07:43:35.871238+00:00
+[2022-12-05T08:03:25.786+0000] {standard_task_runner.py:55} INFO - 🤪 Started process 972 to run task
+[2022-12-05T08:03:25.796+0000] {standard_task_runner.py:82} INFO - 🤪 Running: ['airflow', 'tasks', 'run', 'get_raw_data_from_sources', 'get_raw_data_from_postgres_sources', 'manual__2022-12-05T07:43:35.871238+00:00', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/ingest_dwh_daily.py', '--cfg-path', '/tmp/tmpcbiqid_t']
+[2022-12-05T08:03:25.800+0000] {standard_task_runner.py:83} INFO - 🤪 Job 29: Subtask get_raw_data_from_postgres_sources
+[2022-12-05T08:03:25.947+0000] {task_command.py:376} INFO - 🤪 Running <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources manual__2022-12-05T07:43:35.871238+00:00 [running]> on host 2387a8df1781
+[2022-12-05T08:03:26.080+0000] {taskinstance.py:1590} INFO - 🤪 Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=gp.data@galaxy.com.vn
+AIRFLOW_CTX_DAG_OWNER=data_team
+AIRFLOW_CTX_DAG_ID=get_raw_data_from_sources
+AIRFLOW_CTX_TASK_ID=get_raw_data_from_postgres_sources
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-05T07:43:35.871238+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-05T07:43:35.871238+00:00
+[2022-12-05T08:03:26.106+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source - Table: users
+[2022-12-05T08:03:26.110+0000] {logging_mixin.py:137} INFO - 🤪 Found 100 records need to be inserted
+[2022-12-05T08:03:26.122+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source to DW - Table: users
+[2022-12-05T08:03:26.143+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-05T08:03:26.145+0000] {logging_mixin.py:137} INFO - 🤪 Finished ingesting data from source to DW - Table: users
+[2022-12-05T08:03:26.148+0000] {python.py:177} INFO - 🤪 Done. Returned value was: None
+[2022-12-05T08:03:26.166+0000] {taskinstance.py:1401} INFO - 🤪 Marking task as SUCCESS. dag_id=get_raw_data_from_sources, task_id=get_raw_data_from_postgres_sources, execution_date=20221205T074335, start_date=20221205T080325, end_date=20221205T080326
+[2022-12-05T08:03:26.254+0000] {local_task_job.py:159} INFO - 🤪 Task exited with return code 0
+[2022-12-05T08:03:26.286+0000] {taskinstance.py:2623} INFO - 🤪 0 downstream tasks scheduled from follow-on schedule check

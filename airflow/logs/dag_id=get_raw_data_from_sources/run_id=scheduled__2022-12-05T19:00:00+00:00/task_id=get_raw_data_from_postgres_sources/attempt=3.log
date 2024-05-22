@@ -1,0 +1,45 @@
+[2022-12-07T16:10:48.864+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources scheduled__2022-12-05T19:00:00+00:00 [queued]>
+[2022-12-07T16:10:48.873+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources scheduled__2022-12-05T19:00:00+00:00 [queued]>
+[2022-12-07T16:10:48.874+0000] {taskinstance.py:1362} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-07T16:10:48.874+0000] {taskinstance.py:1363} INFO - 🤪 Starting attempt 3 of 6
+[2022-12-07T16:10:48.875+0000] {taskinstance.py:1364} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-07T16:10:48.890+0000] {taskinstance.py:1383} INFO - 🤪 Executing <Task(PythonOperator): get_raw_data_from_postgres_sources> on 2022-12-05 19:00:00+00:00
+[2022-12-07T16:10:48.893+0000] {standard_task_runner.py:55} INFO - 🤪 Started process 117 to run task
+[2022-12-07T16:10:48.897+0000] {standard_task_runner.py:82} INFO - 🤪 Running: ['airflow', 'tasks', 'run', 'get_raw_data_from_sources', 'get_raw_data_from_postgres_sources', 'scheduled__2022-12-05T19:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/ingest_dwh_daily.py', '--cfg-path', '/tmp/tmpwfzdrx5t']
+[2022-12-07T16:10:48.899+0000] {standard_task_runner.py:83} INFO - 🤪 Job 6: Subtask get_raw_data_from_postgres_sources
+[2022-12-07T16:10:48.949+0000] {task_command.py:376} INFO - 🤪 Running <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources scheduled__2022-12-05T19:00:00+00:00 [running]> on host db3df0a6f633
+[2022-12-07T16:10:48.998+0000] {taskinstance.py:1590} INFO - 🤪 Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=gp.data@galaxy.com.vn
+AIRFLOW_CTX_DAG_OWNER=data_team
+AIRFLOW_CTX_DAG_ID=get_raw_data_from_sources
+AIRFLOW_CTX_TASK_ID=get_raw_data_from_postgres_sources
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-05T19:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=3
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-05T19:00:00+00:00
+[2022-12-07T16:10:49.009+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Postgres - Table: users
+[2022-12-07T16:10:49.010+0000] {logging_mixin.py:137} INFO - 🤪 SELECT user_id, name, email, mobile FROM public.users user_id, name, email, mobile
+[2022-12-07T16:10:49.013+0000] {taskinstance.py:1851} ERROR - 🤪 Task failed with exception
+Traceback (most recent call last):
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/airflow/dags/processing/ingest_psql_source.py", line 56, in ingest_psql_source
+    data = extract_data_from_source(postgres_handler=postgres_handler,
+  File "/airflow/dags/processing/ingest_psql_source.py", line 10, in extract_data_from_source
+    df = pd.DataFrame(data, columns=list_columns)
+  File "/opt/bitnami/python/lib/python3.8/site-packages/pandas/core/frame.py", line 744, in __init__
+    columns = ensure_index(columns)
+  File "/opt/bitnami/python/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 7376, in ensure_index
+    return Index._with_infer(index_like, copy=copy)
+  File "/opt/bitnami/python/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 717, in _with_infer
+    result = cls(*args, **kwargs)
+  File "/opt/bitnami/python/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 546, in __new__
+    raise cls._scalar_data_error(data)
+TypeError: Index(...) must be called with a collection of some kind, 'user_id, name, email, mobile' was passed
+[2022-12-07T16:10:49.023+0000] {taskinstance.py:1401} INFO - 🤪 Marking task as UP_FOR_RETRY. dag_id=get_raw_data_from_sources, task_id=get_raw_data_from_postgres_sources, execution_date=20221205T190000, start_date=20221207T161048, end_date=20221207T161049
+[2022-12-07T16:10:49.041+0000] {standard_task_runner.py:100} ERROR - 🤪 Failed to execute job 6 for task get_raw_data_from_postgres_sources (Index(...) must be called with a collection of some kind, 'user_id, name, email, mobile' was passed; 117)
+[2022-12-07T16:10:49.070+0000] {local_task_job.py:159} INFO - 🤪 Task exited with return code 1
+[2022-12-07T16:10:49.085+0000] {taskinstance.py:2623} INFO - 🤪 0 downstream tasks scheduled from follow-on schedule check

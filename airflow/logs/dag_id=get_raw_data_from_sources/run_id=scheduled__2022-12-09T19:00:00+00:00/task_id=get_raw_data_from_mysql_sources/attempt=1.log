@@ -1,0 +1,88 @@
+[2022-12-10T19:00:05.636+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_mysql_sources scheduled__2022-12-09T19:00:00+00:00 [queued]>
+[2022-12-10T19:00:05.644+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_mysql_sources scheduled__2022-12-09T19:00:00+00:00 [queued]>
+[2022-12-10T19:00:05.645+0000] {taskinstance.py:1362} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-10T19:00:05.646+0000] {taskinstance.py:1363} INFO - 🤪 Starting attempt 1 of 4
+[2022-12-10T19:00:05.646+0000] {taskinstance.py:1364} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-10T19:00:05.660+0000] {taskinstance.py:1383} INFO - 🤪 Executing <Task(PythonOperator): get_raw_data_from_mysql_sources> on 2022-12-09 19:00:00+00:00
+[2022-12-10T19:00:05.664+0000] {standard_task_runner.py:55} INFO - 🤪 Started process 1153 to run task
+[2022-12-10T19:00:05.667+0000] {standard_task_runner.py:82} INFO - 🤪 Running: ['airflow', 'tasks', 'run', 'get_raw_data_from_sources', 'get_raw_data_from_mysql_sources', 'scheduled__2022-12-09T19:00:00+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/ingest_dwh_daily.py', '--cfg-path', '/tmp/tmpazn_gdy0']
+[2022-12-10T19:00:05.669+0000] {standard_task_runner.py:83} INFO - 🤪 Job 19: Subtask get_raw_data_from_mysql_sources
+[2022-12-10T19:00:05.719+0000] {task_command.py:376} INFO - 🤪 Running <TaskInstance: get_raw_data_from_sources.get_raw_data_from_mysql_sources scheduled__2022-12-09T19:00:00+00:00 [running]> on host 06f648095881
+[2022-12-10T19:00:05.773+0000] {taskinstance.py:1590} INFO - 🤪 Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=gp.data@galaxy.com.vn
+AIRFLOW_CTX_DAG_OWNER=data_team
+AIRFLOW_CTX_DAG_ID=get_raw_data_from_sources
+AIRFLOW_CTX_TASK_ID=get_raw_data_from_mysql_sources
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-09T19:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-09T19:00:00+00:00
+[2022-12-10T19:00:05.819+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Mysql - Table: users
+[2022-12-10T19:00:05.842+0000] {logging_mixin.py:137} INFO - 🤪 Found 100 records need to be inserted
+[2022-12-10T19:00:05.843+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Mysql to DW - Table: users
+[2022-12-10T19:00:05.854+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-10T19:00:05.855+0000] {logging_mixin.py:137} INFO - 🤪 Finished ingesting data from source to DW - Table: users
+[2022-12-10T19:00:05.856+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Mysql - Table: orders
+[2022-12-10T19:00:05.861+0000] {logging_mixin.py:137} INFO - 🤪 Found 0 records need to be inserted
+[2022-12-10T19:00:05.862+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Mysql to DW - Table: orders
+[2022-12-10T19:00:05.866+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-10T19:00:05.867+0000] {logging_mixin.py:137} INFO - 🤪 Finished ingesting data from source to DW - Table: orders
+[2022-12-10T19:00:05.867+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Mysql - Table: transactions
+[2022-12-10T19:00:05.872+0000] {logging_mixin.py:137} INFO - 🤪 Found 0 records need to be inserted
+[2022-12-10T19:00:05.872+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Mysql to DW - Table: transactions
+[2022-12-10T19:00:05.876+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-10T19:00:05.877+0000] {logging_mixin.py:137} INFO - 🤪 Finished ingesting data from source to DW - Table: transactions
+[2022-12-10T19:00:05.878+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Mysql - Table: menus
+[2022-12-10T19:00:05.881+0000] {logging_mixin.py:137} INFO - 🤪 Found 0 records need to be inserted
+[2022-12-10T19:00:05.882+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Mysql to DW - Table: menus
+[2022-12-10T19:00:05.887+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-10T19:00:05.888+0000] {logging_mixin.py:137} INFO - 🤪 Finished ingesting data from source to DW - Table: menus
+[2022-12-10T19:00:05.888+0000] {python.py:177} INFO - 🤪 Done. Returned value was: None
+[2022-12-10T19:00:05.894+0000] {taskinstance.py:1401} INFO - 🤪 Marking task as SUCCESS. dag_id=get_raw_data_from_sources, task_id=get_raw_data_from_mysql_sources, execution_date=20221209T190000, start_date=20221210T190005, end_date=20221210T190005
+[2022-12-10T19:00:06.002+0000] {local_task_job.py:159} INFO - 🤪 Task exited with return code 0
+[2022-12-10T19:00:06.017+0000] {taskinstance.py:2623} INFO - 🤪 0 downstream tasks scheduled from follow-on schedule check
+[2022-12-11T05:55:01.651+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_mysql_sources scheduled__2022-12-09T19:00:00+00:00 [queued]>
+[2022-12-11T05:55:01.662+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_mysql_sources scheduled__2022-12-09T19:00:00+00:00 [queued]>
+[2022-12-11T05:55:01.663+0000] {taskinstance.py:1362} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-11T05:55:01.664+0000] {taskinstance.py:1363} INFO - 🤪 Starting attempt 1 of 4
+[2022-12-11T05:55:01.665+0000] {taskinstance.py:1364} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-11T05:55:01.677+0000] {taskinstance.py:1383} INFO - 🤪 Executing <Task(PythonOperator): get_raw_data_from_mysql_sources> on 2022-12-09 19:00:00+00:00
+[2022-12-11T05:55:01.680+0000] {standard_task_runner.py:55} INFO - 🤪 Started process 69 to run task
+[2022-12-11T05:55:01.684+0000] {standard_task_runner.py:82} INFO - 🤪 Running: ['airflow', 'tasks', 'run', 'get_raw_data_from_sources', 'get_raw_data_from_mysql_sources', 'scheduled__2022-12-09T19:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/ingest_dwh_daily.py', '--cfg-path', '/tmp/tmp8p4tmzrh']
+[2022-12-11T05:55:01.687+0000] {standard_task_runner.py:83} INFO - 🤪 Job 3: Subtask get_raw_data_from_mysql_sources
+[2022-12-11T05:55:01.740+0000] {task_command.py:376} INFO - 🤪 Running <TaskInstance: get_raw_data_from_sources.get_raw_data_from_mysql_sources scheduled__2022-12-09T19:00:00+00:00 [running]> on host 2557b583fff6
+[2022-12-11T05:55:01.789+0000] {taskinstance.py:1590} INFO - 🤪 Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=gp.data@galaxy.com.vn
+AIRFLOW_CTX_DAG_OWNER=data_team
+AIRFLOW_CTX_DAG_ID=get_raw_data_from_sources
+AIRFLOW_CTX_TASK_ID=get_raw_data_from_mysql_sources
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-09T19:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-09T19:00:00+00:00
+[2022-12-11T05:55:01.801+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Mysql - Table: users
+[2022-12-11T05:55:01.809+0000] {logging_mixin.py:137} INFO - 🤪 Found 100 records need to be inserted
+[2022-12-11T05:55:01.810+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Mysql to DW - Table: users
+[2022-12-11T05:55:01.817+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-11T05:55:01.818+0000] {logging_mixin.py:137} INFO - 🤪 Finished ingesting data from source to DW - Table: users
+[2022-12-11T05:55:01.818+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Mysql - Table: orders
+[2022-12-11T05:55:01.828+0000] {logging_mixin.py:137} INFO - 🤪 Found 0 records need to be inserted
+[2022-12-11T05:55:01.829+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Mysql to DW - Table: orders
+[2022-12-11T05:55:01.830+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-11T05:55:01.831+0000] {logging_mixin.py:137} INFO - 🤪 Finished ingesting data from source to DW - Table: orders
+[2022-12-11T05:55:01.832+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Mysql - Table: transactions
+[2022-12-11T05:55:01.836+0000] {logging_mixin.py:137} INFO - 🤪 Found 0 records need to be inserted
+[2022-12-11T05:55:01.837+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Mysql to DW - Table: transactions
+[2022-12-11T05:55:01.837+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-11T05:55:01.838+0000] {logging_mixin.py:137} INFO - 🤪 Finished ingesting data from source to DW - Table: transactions
+[2022-12-11T05:55:01.839+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Mysql - Table: menus
+[2022-12-11T05:55:01.842+0000] {logging_mixin.py:137} INFO - 🤪 Found 0 records need to be inserted
+[2022-12-11T05:55:01.843+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Mysql to DW - Table: menus
+[2022-12-11T05:55:01.844+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-11T05:55:01.844+0000] {logging_mixin.py:137} INFO - 🤪 Finished ingesting data from source to DW - Table: menus
+[2022-12-11T05:55:01.845+0000] {python.py:177} INFO - 🤪 Done. Returned value was: None
+[2022-12-11T05:55:01.850+0000] {taskinstance.py:1401} INFO - 🤪 Marking task as SUCCESS. dag_id=get_raw_data_from_sources, task_id=get_raw_data_from_mysql_sources, execution_date=20221209T190000, start_date=20221211T055501, end_date=20221211T055501
+[2022-12-11T05:55:01.978+0000] {local_task_job.py:159} INFO - 🤪 Task exited with return code 0
+[2022-12-11T05:55:01.995+0000] {taskinstance.py:2623} INFO - 🤪 0 downstream tasks scheduled from follow-on schedule check

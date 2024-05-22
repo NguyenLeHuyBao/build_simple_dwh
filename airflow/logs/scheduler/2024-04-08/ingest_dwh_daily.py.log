@@ -1,0 +1,25 @@
+[2024-04-08T09:12:53.273+0000] {processor.py:154} INFO - 🤪 Started process (PID=51) to work on /airflow/dags/ingest_dwh_daily.py
+[2024-04-08T09:12:53.275+0000] {processor.py:756} INFO - 🤪 Processing file /airflow/dags/ingest_dwh_daily.py for tasks to queue
+[2024-04-08T09:12:53.276+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:12:53.276+0000] {dagbag.py:537} INFO - 🤪 Filling up the DagBag from /airflow/dags/ingest_dwh_daily.py
+[2024-04-08T09:12:53.658+0000] {processor.py:766} INFO - 🤪 DAG(s) dict_keys(['get_raw_data_from_sources']) retrieved from /airflow/dags/ingest_dwh_daily.py
+[2024-04-08T09:12:53.772+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:12:53.772+0000] {manager.py:507} INFO - 🤪 Created Permission View: can delete on DAG:get_raw_data_from_sources
+[2024-04-08T09:12:53.782+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:12:53.782+0000] {manager.py:507} INFO - 🤪 Created Permission View: can read on DAG:get_raw_data_from_sources
+[2024-04-08T09:12:53.790+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:12:53.790+0000] {manager.py:507} INFO - 🤪 Created Permission View: can edit on DAG:get_raw_data_from_sources
+[2024-04-08T09:12:53.791+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:12:53.791+0000] {dag.py:2585} INFO - 🤪 Sync 1 DAGs
+[2024-04-08T09:12:53.802+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:12:53.801+0000] {dag.py:2606} INFO - 🤪 Creating ORM DAG for get_raw_data_from_sources
+[2024-04-08T09:12:53.813+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:12:53.813+0000] {dag.py:3336} INFO - 🤪 Setting next_dagrun for get_raw_data_from_sources to 2024-04-07T02:00:00+00:00, run_after=2024-04-08T02:00:00+00:00
+[2024-04-08T09:12:53.831+0000] {processor.py:176} INFO - 🤪 Processing /airflow/dags/ingest_dwh_daily.py took 0.561 seconds
+[2024-04-08T09:13:24.758+0000] {processor.py:154} INFO - 🤪 Started process (PID=56) to work on /airflow/dags/ingest_dwh_daily.py
+[2024-04-08T09:13:24.760+0000] {processor.py:756} INFO - 🤪 Processing file /airflow/dags/ingest_dwh_daily.py for tasks to queue
+[2024-04-08T09:13:24.762+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:13:24.761+0000] {dagbag.py:537} INFO - 🤪 Filling up the DagBag from /airflow/dags/ingest_dwh_daily.py
+[2024-04-08T09:13:25.170+0000] {processor.py:766} INFO - 🤪 DAG(s) dict_keys(['get_raw_data_from_sources']) retrieved from /airflow/dags/ingest_dwh_daily.py
+[2024-04-08T09:13:25.199+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:13:25.199+0000] {dag.py:2585} INFO - 🤪 Sync 1 DAGs
+[2024-04-08T09:13:25.225+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:13:25.225+0000] {dag.py:3336} INFO - 🤪 Setting next_dagrun for get_raw_data_from_sources to 2024-04-07T02:00:00+00:00, run_after=2024-04-08T02:00:00+00:00
+[2024-04-08T09:13:25.259+0000] {processor.py:176} INFO - 🤪 Processing /airflow/dags/ingest_dwh_daily.py took 0.505 seconds
+[2024-04-08T09:13:57.633+0000] {processor.py:154} INFO - 🤪 Started process (PID=60) to work on /airflow/dags/ingest_dwh_daily.py
+[2024-04-08T09:13:57.637+0000] {processor.py:756} INFO - 🤪 Processing file /airflow/dags/ingest_dwh_daily.py for tasks to queue
+[2024-04-08T09:13:57.643+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:13:57.641+0000] {dagbag.py:537} INFO - 🤪 Filling up the DagBag from /airflow/dags/ingest_dwh_daily.py
+[2024-04-08T09:13:59.191+0000] {processor.py:766} INFO - 🤪 DAG(s) dict_keys(['get_raw_data_from_sources']) retrieved from /airflow/dags/ingest_dwh_daily.py
+[2024-04-08T09:13:59.397+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:13:59.396+0000] {dag.py:2585} INFO - 🤪 Sync 1 DAGs
+[2024-04-08T09:13:59.519+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:13:59.519+0000] {dag.py:3336} INFO - 🤪 Setting next_dagrun for get_raw_data_from_sources to 2024-04-07T02:00:00+00:00, run_after=2024-04-08T02:00:00+00:00
+[2024-04-08T09:13:59.614+0000] {processor.py:176} INFO - 🤪 Processing /airflow/dags/ingest_dwh_daily.py took 1.990 seconds

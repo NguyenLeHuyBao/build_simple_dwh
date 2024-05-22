@@ -1,0 +1,86 @@
+[2022-12-10T11:33:30.673+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: update_dwh_daily.check_update_psql_source scheduled__2022-12-08T19:30:00+00:00 [queued]>
+[2022-12-10T11:33:30.683+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: update_dwh_daily.check_update_psql_source scheduled__2022-12-08T19:30:00+00:00 [queued]>
+[2022-12-10T11:33:30.684+0000] {taskinstance.py:1362} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-10T11:33:30.685+0000] {taskinstance.py:1363} INFO - 🤪 Starting attempt 1 of 4
+[2022-12-10T11:33:30.685+0000] {taskinstance.py:1364} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-10T11:33:30.698+0000] {taskinstance.py:1383} INFO - 🤪 Executing <Task(PythonOperator): check_update_psql_source> on 2022-12-08 19:30:00+00:00
+[2022-12-10T11:33:30.702+0000] {standard_task_runner.py:55} INFO - 🤪 Started process 1055 to run task
+[2022-12-10T11:33:30.705+0000] {standard_task_runner.py:82} INFO - 🤪 Running: ['airflow', 'tasks', 'run', 'update_dwh_daily', 'check_update_psql_source', 'scheduled__2022-12-08T19:30:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/update_dwh_daily.py', '--cfg-path', '/tmp/tmpba2r1ok5']
+[2022-12-10T11:33:30.707+0000] {standard_task_runner.py:83} INFO - 🤪 Job 3: Subtask check_update_psql_source
+[2022-12-10T11:33:30.757+0000] {task_command.py:376} INFO - 🤪 Running <TaskInstance: update_dwh_daily.check_update_psql_source scheduled__2022-12-08T19:30:00+00:00 [running]> on host f9163ca376ce
+[2022-12-10T11:33:30.812+0000] {taskinstance.py:1590} INFO - 🤪 Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=gp.data@galaxy.com.vn
+AIRFLOW_CTX_DAG_OWNER=data_team
+AIRFLOW_CTX_DAG_ID=update_dwh_daily
+AIRFLOW_CTX_TASK_ID=check_update_psql_source
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-08T19:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-08T19:30:00+00:00
+[2022-12-10T11:33:30.883+0000] {logging_mixin.py:137} INFO - 🤪 Start checking for updated data from source Postgres - Table: users
+[2022-12-10T11:33:30.889+0000] {taskinstance.py:1851} ERROR - 🤪 Task failed with exception
+Traceback (most recent call last):
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/airflow/dags/processing/check_update_psql_source.py", line 48, in check_update_psql_source
+    data = find_updated_records(postgres_handler=postgres_handler,
+  File "/airflow/dags/processing/check_update_psql_source.py", line 8, in find_updated_records
+    data = postgres_handler.action_db(query_str=sql_query, action='select')
+  File "/airflow/dags/db_handler/master_handler.py", line 71, in action_db
+    return self._get_data(query_str)
+  File "/airflow/dags/db_handler/master_handler.py", line 35, in _get_data
+    cur.execute(query_str)
+psycopg2.errors.SyntaxError: syntax error at or near "["
+LINE 1: SELECT ['user_id', 'name', 'email', 'mobile'] FROM users WHE...
+               ^
+
+[2022-12-10T11:33:30.898+0000] {taskinstance.py:1401} INFO - 🤪 Marking task as UP_FOR_RETRY. dag_id=update_dwh_daily, task_id=check_update_psql_source, execution_date=20221208T193000, start_date=20221210T113330, end_date=20221210T113330
+[2022-12-10T11:33:30.907+0000] {standard_task_runner.py:100} ERROR - 🤪 Failed to execute job 3 for task check_update_psql_source (syntax error at or near "["
+LINE 1: SELECT ['user_id', 'name', 'email', 'mobile'] FROM users WHE...
+               ^
+; 1055)
+[2022-12-10T11:33:30.918+0000] {local_task_job.py:159} INFO - 🤪 Task exited with return code 1
+[2022-12-10T11:33:30.936+0000] {taskinstance.py:2623} INFO - 🤪 0 downstream tasks scheduled from follow-on schedule check
+[2022-12-10T12:00:27.617+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: update_dwh_daily.check_update_psql_source scheduled__2022-12-08T19:30:00+00:00 [queued]>
+[2022-12-10T12:00:27.626+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: update_dwh_daily.check_update_psql_source scheduled__2022-12-08T19:30:00+00:00 [queued]>
+[2022-12-10T12:00:27.627+0000] {taskinstance.py:1362} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-10T12:00:27.628+0000] {taskinstance.py:1363} INFO - 🤪 Starting attempt 1 of 4
+[2022-12-10T12:00:27.629+0000] {taskinstance.py:1364} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-10T12:00:27.642+0000] {taskinstance.py:1383} INFO - 🤪 Executing <Task(PythonOperator): check_update_psql_source> on 2022-12-08 19:30:00+00:00
+[2022-12-10T12:00:27.645+0000] {standard_task_runner.py:55} INFO - 🤪 Started process 132 to run task
+[2022-12-10T12:00:27.649+0000] {standard_task_runner.py:82} INFO - 🤪 Running: ['airflow', 'tasks', 'run', 'update_dwh_daily', 'check_update_psql_source', 'scheduled__2022-12-08T19:30:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/update_dwh_daily.py', '--cfg-path', '/tmp/tmptvjh1ju4']
+[2022-12-10T12:00:27.651+0000] {standard_task_runner.py:83} INFO - 🤪 Job 9: Subtask check_update_psql_source
+[2022-12-10T12:00:27.721+0000] {task_command.py:376} INFO - 🤪 Running <TaskInstance: update_dwh_daily.check_update_psql_source scheduled__2022-12-08T19:30:00+00:00 [running]> on host 06f648095881
+[2022-12-10T12:00:27.823+0000] {taskinstance.py:1590} INFO - 🤪 Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=gp.data@galaxy.com.vn
+AIRFLOW_CTX_DAG_OWNER=data_team
+AIRFLOW_CTX_DAG_ID=update_dwh_daily
+AIRFLOW_CTX_TASK_ID=check_update_psql_source
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-08T19:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-08T19:30:00+00:00
+[2022-12-10T12:00:27.848+0000] {logging_mixin.py:137} INFO - 🤪 Start checking for updated data from source Postgres - Table: users
+[2022-12-10T12:00:27.886+0000] {logging_mixin.py:137} INFO - 🤪 Found 0 updated records
+[2022-12-10T12:00:27.888+0000] {logging_mixin.py:137} INFO - 🤪 Start updating DWH data - Table: users
+[2022-12-10T12:00:27.893+0000] {logging_mixin.py:137} INFO - 🤪 Finished update DWH data - Table: users
+[2022-12-10T12:00:27.894+0000] {logging_mixin.py:137} INFO - 🤪 Start checking for updated data from source Postgres - Table: orders
+[2022-12-10T12:00:27.900+0000] {logging_mixin.py:137} INFO - 🤪 Found 0 updated records
+[2022-12-10T12:00:27.901+0000] {logging_mixin.py:137} INFO - 🤪 Start updating DWH data - Table: orders
+[2022-12-10T12:00:27.903+0000] {logging_mixin.py:137} INFO - 🤪 Finished update DWH data - Table: orders
+[2022-12-10T12:00:27.904+0000] {logging_mixin.py:137} INFO - 🤪 Start checking for updated data from source Postgres - Table: transactions
+[2022-12-10T12:00:27.908+0000] {logging_mixin.py:137} INFO - 🤪 Found 0 updated records
+[2022-12-10T12:00:27.909+0000] {logging_mixin.py:137} INFO - 🤪 Start updating DWH data - Table: transactions
+[2022-12-10T12:00:27.911+0000] {logging_mixin.py:137} INFO - 🤪 Finished update DWH data - Table: transactions
+[2022-12-10T12:00:27.912+0000] {logging_mixin.py:137} INFO - 🤪 Start checking for updated data from source Postgres - Table: menus
+[2022-12-10T12:00:27.916+0000] {logging_mixin.py:137} INFO - 🤪 Found 0 updated records
+[2022-12-10T12:00:27.917+0000] {logging_mixin.py:137} INFO - 🤪 Start updating DWH data - Table: menus
+[2022-12-10T12:00:27.919+0000] {logging_mixin.py:137} INFO - 🤪 Finished update DWH data - Table: menus
+[2022-12-10T12:00:27.920+0000] {python.py:177} INFO - 🤪 Done. Returned value was: None
+[2022-12-10T12:00:27.929+0000] {taskinstance.py:1401} INFO - 🤪 Marking task as SUCCESS. dag_id=update_dwh_daily, task_id=check_update_psql_source, execution_date=20221208T193000, start_date=20221210T120027, end_date=20221210T120027
+[2022-12-10T12:00:27.984+0000] {local_task_job.py:159} INFO - 🤪 Task exited with return code 0
+[2022-12-10T12:00:28.000+0000] {taskinstance.py:2623} INFO - 🤪 0 downstream tasks scheduled from follow-on schedule check

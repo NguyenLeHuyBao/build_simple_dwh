@@ -1,0 +1,67 @@
+[2022-11-24T14:57:30.715+0000] {processor.py:154} INFO - Started process (PID=31) to work on /airflow/dags/python_test.py
+[2022-11-24T14:57:30.717+0000] {processor.py:756} INFO - Processing file /airflow/dags/python_test.py for tasks to queue
+[2022-11-24T14:57:30.719+0000] {logging_mixin.py:137} INFO - [2022-11-24T14:57:30.719+0000] {dagbag.py:537} INFO - Filling up the DagBag from /airflow/dags/python_test.py
+[2022-11-24T14:57:30.758+0000] {processor.py:766} INFO - DAG(s) dict_keys(['auto_partition_table']) retrieved from /airflow/dags/python_test.py
+[2022-11-24T14:57:30.980+0000] {logging_mixin.py:137} INFO - [2022-11-24T14:57:30.980+0000] {manager.py:507} INFO - Created Permission View: can delete on DAG:auto_partition_table
+[2022-11-24T14:57:30.999+0000] {logging_mixin.py:137} INFO - [2022-11-24T14:57:30.999+0000] {manager.py:507} INFO - Created Permission View: can edit on DAG:auto_partition_table
+[2022-11-24T14:57:31.012+0000] {logging_mixin.py:137} INFO - [2022-11-24T14:57:31.012+0000] {manager.py:507} INFO - Created Permission View: can read on DAG:auto_partition_table
+[2022-11-24T14:57:31.013+0000] {logging_mixin.py:137} INFO - [2022-11-24T14:57:31.013+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-11-24T14:57:31.029+0000] {logging_mixin.py:137} INFO - [2022-11-24T14:57:31.029+0000] {dag.py:2606} INFO - Creating ORM DAG for auto_partition_table
+[2022-11-24T14:57:31.048+0000] {logging_mixin.py:137} INFO - [2022-11-24T14:57:31.048+0000] {dag.py:3336} INFO - Setting next_dagrun for auto_partition_table to 2022-09-01T11:00:00+00:00, run_after=2023-01-01T11:00:00+00:00
+[2022-11-24T14:57:31.075+0000] {processor.py:176} INFO - Processing /airflow/dags/python_test.py took 0.363 seconds
+[2022-11-24T14:58:01.876+0000] {processor.py:154} INFO - Started process (PID=36) to work on /airflow/dags/python_test.py
+[2022-11-24T14:58:01.884+0000] {processor.py:756} INFO - Processing file /airflow/dags/python_test.py for tasks to queue
+[2022-11-24T14:58:01.885+0000] {logging_mixin.py:137} INFO - [2022-11-24T14:58:01.885+0000] {dagbag.py:537} INFO - Filling up the DagBag from /airflow/dags/python_test.py
+[2022-11-24T14:58:01.909+0000] {processor.py:766} INFO - DAG(s) dict_keys(['auto_partition_table']) retrieved from /airflow/dags/python_test.py
+[2022-11-24T14:58:01.944+0000] {logging_mixin.py:137} INFO - [2022-11-24T14:58:01.944+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-11-24T14:58:01.975+0000] {logging_mixin.py:137} INFO - [2022-11-24T14:58:01.974+0000] {dag.py:3336} INFO - Setting next_dagrun for auto_partition_table to 2022-09-01T11:00:00+00:00, run_after=2023-01-01T11:00:00+00:00
+[2022-11-24T14:58:02.012+0000] {processor.py:176} INFO - Processing /airflow/dags/python_test.py took 0.140 seconds
+[2022-11-24T14:58:32.186+0000] {processor.py:154} INFO - Started process (PID=37) to work on /airflow/dags/python_test.py
+[2022-11-24T14:58:32.195+0000] {processor.py:756} INFO - Processing file /airflow/dags/python_test.py for tasks to queue
+[2022-11-24T14:58:32.197+0000] {logging_mixin.py:137} INFO - [2022-11-24T14:58:32.197+0000] {dagbag.py:537} INFO - Filling up the DagBag from /airflow/dags/python_test.py
+[2022-11-24T14:58:32.227+0000] {processor.py:766} INFO - DAG(s) dict_keys(['auto_partition_table']) retrieved from /airflow/dags/python_test.py
+[2022-11-24T14:58:32.268+0000] {logging_mixin.py:137} INFO - [2022-11-24T14:58:32.268+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-11-24T14:58:32.303+0000] {logging_mixin.py:137} INFO - [2022-11-24T14:58:32.303+0000] {dag.py:3336} INFO - Setting next_dagrun for auto_partition_table to 2022-09-01T11:00:00+00:00, run_after=2023-01-01T11:00:00+00:00
+[2022-11-24T14:58:32.340+0000] {processor.py:176} INFO - Processing /airflow/dags/python_test.py took 0.159 seconds
+[2022-11-24T14:59:02.451+0000] {processor.py:154} INFO - Started process (PID=38) to work on /airflow/dags/python_test.py
+[2022-11-24T14:59:02.459+0000] {processor.py:756} INFO - Processing file /airflow/dags/python_test.py for tasks to queue
+[2022-11-24T14:59:02.461+0000] {logging_mixin.py:137} INFO - [2022-11-24T14:59:02.460+0000] {dagbag.py:537} INFO - Filling up the DagBag from /airflow/dags/python_test.py
+[2022-11-24T14:59:02.492+0000] {processor.py:766} INFO - DAG(s) dict_keys(['auto_partition_table']) retrieved from /airflow/dags/python_test.py
+[2022-11-24T14:59:02.527+0000] {logging_mixin.py:137} INFO - [2022-11-24T14:59:02.527+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-11-24T14:59:02.559+0000] {logging_mixin.py:137} INFO - [2022-11-24T14:59:02.559+0000] {dag.py:3336} INFO - Setting next_dagrun for auto_partition_table to 2022-09-01T11:00:00+00:00, run_after=2023-01-01T11:00:00+00:00
+[2022-11-24T14:59:02.591+0000] {processor.py:176} INFO - Processing /airflow/dags/python_test.py took 0.146 seconds
+[2022-11-24T14:59:32.741+0000] {processor.py:154} INFO - Started process (PID=39) to work on /airflow/dags/python_test.py
+[2022-11-24T14:59:32.749+0000] {processor.py:756} INFO - Processing file /airflow/dags/python_test.py for tasks to queue
+[2022-11-24T14:59:32.751+0000] {logging_mixin.py:137} INFO - [2022-11-24T14:59:32.751+0000] {dagbag.py:537} INFO - Filling up the DagBag from /airflow/dags/python_test.py
+[2022-11-24T14:59:32.773+0000] {processor.py:766} INFO - DAG(s) dict_keys(['auto_partition_table']) retrieved from /airflow/dags/python_test.py
+[2022-11-24T14:59:32.800+0000] {logging_mixin.py:137} INFO - [2022-11-24T14:59:32.800+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-11-24T14:59:32.825+0000] {logging_mixin.py:137} INFO - [2022-11-24T14:59:32.825+0000] {dag.py:3336} INFO - Setting next_dagrun for auto_partition_table to 2022-09-01T11:00:00+00:00, run_after=2023-01-01T11:00:00+00:00
+[2022-11-24T14:59:32.848+0000] {processor.py:176} INFO - Processing /airflow/dags/python_test.py took 0.110 seconds
+[2022-11-24T15:00:03.113+0000] {processor.py:154} INFO - Started process (PID=40) to work on /airflow/dags/python_test.py
+[2022-11-24T15:00:03.121+0000] {processor.py:756} INFO - Processing file /airflow/dags/python_test.py for tasks to queue
+[2022-11-24T15:00:03.123+0000] {logging_mixin.py:137} INFO - [2022-11-24T15:00:03.123+0000] {dagbag.py:537} INFO - Filling up the DagBag from /airflow/dags/python_test.py
+[2022-11-24T15:00:03.148+0000] {processor.py:766} INFO - DAG(s) dict_keys(['auto_partition_table']) retrieved from /airflow/dags/python_test.py
+[2022-11-24T15:00:03.182+0000] {logging_mixin.py:137} INFO - [2022-11-24T15:00:03.181+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-11-24T15:00:03.215+0000] {logging_mixin.py:137} INFO - [2022-11-24T15:00:03.214+0000] {dag.py:3336} INFO - Setting next_dagrun for auto_partition_table to 2022-09-01T11:00:00+00:00, run_after=2023-01-01T11:00:00+00:00
+[2022-11-24T15:00:03.246+0000] {processor.py:176} INFO - Processing /airflow/dags/python_test.py took 0.136 seconds
+[2022-11-24T15:00:33.515+0000] {processor.py:154} INFO - Started process (PID=41) to work on /airflow/dags/python_test.py
+[2022-11-24T15:00:33.519+0000] {processor.py:756} INFO - Processing file /airflow/dags/python_test.py for tasks to queue
+[2022-11-24T15:00:33.522+0000] {logging_mixin.py:137} INFO - [2022-11-24T15:00:33.521+0000] {dagbag.py:537} INFO - Filling up the DagBag from /airflow/dags/python_test.py
+[2022-11-24T15:00:33.558+0000] {processor.py:766} INFO - DAG(s) dict_keys(['auto_partition_table']) retrieved from /airflow/dags/python_test.py
+[2022-11-24T15:00:33.612+0000] {logging_mixin.py:137} INFO - [2022-11-24T15:00:33.611+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-11-24T15:00:33.665+0000] {logging_mixin.py:137} INFO - [2022-11-24T15:00:33.665+0000] {dag.py:3336} INFO - Setting next_dagrun for auto_partition_table to 2022-09-01T11:00:00+00:00, run_after=2023-01-01T11:00:00+00:00
+[2022-11-24T15:00:33.715+0000] {processor.py:176} INFO - Processing /airflow/dags/python_test.py took 0.205 seconds
+[2022-11-24T15:01:03.903+0000] {processor.py:154} INFO - Started process (PID=42) to work on /airflow/dags/python_test.py
+[2022-11-24T15:01:03.906+0000] {processor.py:756} INFO - Processing file /airflow/dags/python_test.py for tasks to queue
+[2022-11-24T15:01:03.910+0000] {logging_mixin.py:137} INFO - [2022-11-24T15:01:03.909+0000] {dagbag.py:537} INFO - Filling up the DagBag from /airflow/dags/python_test.py
+[2022-11-24T15:01:03.949+0000] {processor.py:766} INFO - DAG(s) dict_keys(['auto_partition_table']) retrieved from /airflow/dags/python_test.py
+[2022-11-24T15:01:03.989+0000] {logging_mixin.py:137} INFO - [2022-11-24T15:01:03.989+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-11-24T15:01:04.025+0000] {logging_mixin.py:137} INFO - [2022-11-24T15:01:04.025+0000] {dag.py:3336} INFO - Setting next_dagrun for auto_partition_table to 2022-09-01T11:00:00+00:00, run_after=2023-01-01T11:00:00+00:00
+[2022-11-24T15:01:04.054+0000] {processor.py:176} INFO - Processing /airflow/dags/python_test.py took 0.157 seconds
+[2022-11-24T15:01:34.239+0000] {processor.py:154} INFO - Started process (PID=43) to work on /airflow/dags/python_test.py
+[2022-11-24T15:01:34.247+0000] {processor.py:756} INFO - Processing file /airflow/dags/python_test.py for tasks to queue
+[2022-11-24T15:01:34.249+0000] {logging_mixin.py:137} INFO - [2022-11-24T15:01:34.249+0000] {dagbag.py:537} INFO - Filling up the DagBag from /airflow/dags/python_test.py
+[2022-11-24T15:01:34.275+0000] {processor.py:766} INFO - DAG(s) dict_keys(['auto_partition_table']) retrieved from /airflow/dags/python_test.py
+[2022-11-24T15:01:34.312+0000] {logging_mixin.py:137} INFO - [2022-11-24T15:01:34.311+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-11-24T15:01:34.347+0000] {logging_mixin.py:137} INFO - [2022-11-24T15:01:34.346+0000] {dag.py:3336} INFO - Setting next_dagrun for auto_partition_table to 2022-09-01T11:00:00+00:00, run_after=2023-01-01T11:00:00+00:00
+[2022-11-24T15:01:34.381+0000] {processor.py:176} INFO - Processing /airflow/dags/python_test.py took 0.146 seconds

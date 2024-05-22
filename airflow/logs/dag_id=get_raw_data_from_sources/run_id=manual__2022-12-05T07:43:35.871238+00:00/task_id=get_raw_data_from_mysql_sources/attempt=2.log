@@ -1,0 +1,47 @@
+[2022-12-05T08:06:21.627+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_mysql_sources manual__2022-12-05T07:43:35.871238+00:00 [queued]>
+[2022-12-05T08:06:21.635+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_mysql_sources manual__2022-12-05T07:43:35.871238+00:00 [queued]>
+[2022-12-05T08:06:21.636+0000] {taskinstance.py:1362} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-05T08:06:21.637+0000] {taskinstance.py:1363} INFO - 🤪 Starting attempt 2 of 4
+[2022-12-05T08:06:21.638+0000] {taskinstance.py:1364} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-05T08:06:21.654+0000] {taskinstance.py:1383} INFO - 🤪 Executing <Task(PythonOperator): get_raw_data_from_mysql_sources> on 2022-12-05 07:43:35.871238+00:00
+[2022-12-05T08:06:21.658+0000] {standard_task_runner.py:55} INFO - 🤪 Started process 989 to run task
+[2022-12-05T08:06:21.662+0000] {standard_task_runner.py:82} INFO - 🤪 Running: ['airflow', 'tasks', 'run', 'get_raw_data_from_sources', 'get_raw_data_from_mysql_sources', 'manual__2022-12-05T07:43:35.871238+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/ingest_dwh_daily.py', '--cfg-path', '/tmp/tmp5i275494']
+[2022-12-05T08:06:21.664+0000] {standard_task_runner.py:83} INFO - 🤪 Job 30: Subtask get_raw_data_from_mysql_sources
+[2022-12-05T08:06:21.714+0000] {task_command.py:376} INFO - 🤪 Running <TaskInstance: get_raw_data_from_sources.get_raw_data_from_mysql_sources manual__2022-12-05T07:43:35.871238+00:00 [running]> on host 2387a8df1781
+[2022-12-05T08:06:21.765+0000] {taskinstance.py:1590} INFO - 🤪 Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=gp.data@galaxy.com.vn
+AIRFLOW_CTX_DAG_OWNER=data_team
+AIRFLOW_CTX_DAG_ID=get_raw_data_from_sources
+AIRFLOW_CTX_TASK_ID=get_raw_data_from_mysql_sources
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-05T07:43:35.871238+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-05T07:43:35.871238+00:00
+[2022-12-05T08:06:21.767+0000] {logging_mixin.py:137} INFO - 🤪 Connecting to the MySQL database...
+[2022-12-05T08:06:21.784+0000] {logging_mixin.py:137} INFO - 🤪 Database connection closed.
+[2022-12-05T08:06:21.793+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-05T08:06:21.794+0000] {logging_mixin.py:137} INFO - 🤪 Connecting to the MySQL database...
+[2022-12-05T08:06:21.801+0000] {logging_mixin.py:137} INFO - 🤪 Database connection closed.
+[2022-12-05T08:06:21.806+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-05T08:06:21.807+0000] {logging_mixin.py:137} INFO - 🤪 Connecting to the MySQL database...
+[2022-12-05T08:06:21.813+0000] {logging_mixin.py:137} INFO - 🤪 Database connection closed.
+[2022-12-05T08:06:21.820+0000] {logging_mixin.py:137} INFO - 🤪 the dataframe is inserted
+[2022-12-05T08:06:21.821+0000] {logging_mixin.py:137} INFO - 🤪 Connecting to the MySQL database...
+[2022-12-05T08:06:21.825+0000] {logging_mixin.py:137} INFO - 🤪 (1142, "SELECT command denied to user 'report_admin'@'172.18.0.2' for table 'menus'")
+[2022-12-05T08:06:21.826+0000] {logging_mixin.py:137} INFO - 🤪 Database connection closed.
+[2022-12-05T08:06:21.832+0000] {taskinstance.py:1851} ERROR - 🤪 Task failed with exception
+Traceback (most recent call last):
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/airflow/dags/controller/get_raw_data_from_mysql_source.py", line 36, in get_raw_data_from_mysql_source
+    execute_values(conn, data, table)
+  File "/airflow/dags/controller/source_controller.py", line 8, in execute_values
+    tuples = [tuple(x) for x in df.to_numpy()]
+AttributeError: 'NoneType' object has no attribute 'to_numpy'
+[2022-12-05T08:06:21.843+0000] {taskinstance.py:1401} INFO - 🤪 Marking task as UP_FOR_RETRY. dag_id=get_raw_data_from_sources, task_id=get_raw_data_from_mysql_sources, execution_date=20221205T074335, start_date=20221205T080621, end_date=20221205T080621
+[2022-12-05T08:06:21.858+0000] {standard_task_runner.py:100} ERROR - 🤪 Failed to execute job 30 for task get_raw_data_from_mysql_sources ('NoneType' object has no attribute 'to_numpy'; 989)
+[2022-12-05T08:06:21.876+0000] {local_task_job.py:159} INFO - 🤪 Task exited with return code 1
+[2022-12-05T08:06:21.890+0000] {taskinstance.py:2623} INFO - 🤪 0 downstream tasks scheduled from follow-on schedule check

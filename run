@@ -1,0 +1,59 @@
+#!/bin/bash
+
+######### INTRODUCTION #####################################################################
+## Setup: ----------------------------------------------------------------------------------
+# chmod +x run
+# export PATH=$PATH:/Users/admin/Desktop/build_simple_dwh
+## Using: ----------------------------------------------------------------------------------
+# Run project: run start
+# Stop project: run stop
+# List all services in project: run ls
+# Show logs of service: run logs service_name
+# Restart service: run restart service_name
+# Exec service: run exec service_name
+############################################################################################
+
+if [ $1 == "start" ]; then
+  read -p "Do you want to start Project ETL ?(y/n) " answer
+  echo "---------------------------------------------------------------------------------------------------"
+  if [ $answer == "y" ]; then
+    echo "Start Project ETL"
+    docker-compose up -d
+    echo "Success!"
+  fi
+
+elif [ $1 == "stop" ]; then
+  read -p "Do you want to stop Project ETL ?(y/n) " answer
+  echo "---------------------------------------------------------------------------------------------------"
+  if [ $answer == "y" ]; then
+    echo "Stop Project ETL"
+    docker-compose down
+    echo "Success!"
+  fi
+
+elif [ $1 == "ls" ]; then
+  echo "List of Services in Project"
+  echo "---------------------------------------------------------------------------------------------------"
+  docker-compose ps
+
+elif [ $1 == "logs" ]; then
+  echo "Show logs of $2 Service: "
+  echo "---------------------------------------------------------------------------------------------------"
+  docker-compose logs "$2"
+
+elif [ $1 == "restart" ]; then
+  echo "Restart $2 Service: "
+  echo "---------------------------------------------------------------------------------------------------"
+  docker-compose restart "$2"
+
+elif [ $1 == "exec" ]; then
+  echo "Execute $2 Service"
+  echo "---------------------------------------------------------------------------------------------------"
+  docker exec -it $2 bash
+
+
+
+fi
+
+echo "---------------------------------------------------------------------------------------------------"
+echo "End."

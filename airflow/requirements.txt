@@ -1,0 +1,5 @@
+apache-airflow==2.4.3
+pandas
+psycopg2-binary
+pymysql
+gspread_pandas

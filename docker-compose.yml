@@ -1,0 +1,62 @@
+version: '3'
+
+services:
+  ################## Services for AIRFLOW: =======================================================
+  airflow:
+    image: airflow:2.4.3-python3.8.15
+    container_name: airflow
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./airflow/dags/:/airflow/dags
+      - ./airflow/logs/:/airflow/logs
+      - ./airflow/airflow.cfg:/airflow/airflow.cfg
+      - ./airflow/requirements.txt:/airflow/requirements.txt
+      - ./airflow/start:/airflow/start
+    command: >
+      bash -c "chmod +x /airflow/start
+      && bash start
+      && airflow scheduler"
+
+
+  ############# Service for DATA WAREHOUSE: =========================================================
+  psql_dw:
+    image: bitnami/postgresql:13.4.0
+    container_name: psql_dw
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRESQL_DATABASE=report
+      - POSTGRESQL_USERNAME=report_admin
+      - POSTGRESQL_PASSWORD=report_admin
+      - TZ=Asia/Ho_Chi_Minh
+    volumes:
+      - ./init_data/init_dwh.sql:/docker-entrypoint-initdb.d/init.sql
+
+  ############# Service for DATA SOURCE: =========================================================
+  psql_source:
+    image: bitnami/postgresql:13.4.0
+    container_name: psql_source
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRESQL_DATABASE=report
+      - POSTGRESQL_USERNAME=report_admin
+      - POSTGRESQL_PASSWORD=report_admin
+      - TZ=Asia/Ho_Chi_Minh
+    volumes:
+      - ./init_data/init_psql_source.sql:/docker-entrypoint-initdb.d/init.sql
+
+  mysql_source:
+    image: mysql:8.0.31
+    container_name: mysql_source
+    ports:
+      - "5434:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=admin
+      - MYSQL_DATABASE=report
+      - MYSQL_USER=report_admin
+      - MYSQL_PASSWORD=report_admin
+      - TZ=Asia/Ho_Chi_Minh
+    volumes:
+      - ./init_data/init_mysql_source.sql:/docker-entrypoint-initdb.d/init.sql

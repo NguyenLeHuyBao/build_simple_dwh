@@ -1,0 +1,140 @@
+[2022-12-03T09:34:58.544+0000] {processor.py:154} INFO - 🤪 Started process (PID=97) to work on /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:34:58.547+0000] {processor.py:756} INFO - 🤪 Processing file /airflow/dags/controller/get_raw_data_from_postgres_source.py for tasks to queue
+[2022-12-03T09:34:58.549+0000] {logging_mixin.py:137} INFO - 🤪 [2022-12-03T09:34:58.549+0000] {dagbag.py:537} INFO - 🤪 Filling up the DagBag from /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:34:58.571+0000] {logging_mixin.py:137} INFO - 🤪 [2022-12-03T09:34:58.565+0000] {dagbag.py:342} ERROR - 🤪 Failed to import: /airflow/dags/controller/get_raw_data_from_postgres_source.py
+Traceback (most recent call last):
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/airflow/dags/controller/get_raw_data_from_postgres_source.py", line 5, in <module>
+    from airflow.dags.controller import source_controller
+ModuleNotFoundError: No module named 'airflow.dags'
+[2022-12-03T09:34:58.575+0000] {processor.py:768} WARNING - 🤪 No viable dags retrieved from /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:34:58.597+0000] {processor.py:176} INFO - 🤪 Processing /airflow/dags/controller/get_raw_data_from_postgres_source.py took 0.057 seconds
+[2022-12-03T09:54:08.763+0000] {processor.py:154} INFO - 🤪 Started process (PID=46) to work on /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:54:08.767+0000] {processor.py:756} INFO - 🤪 Processing file /airflow/dags/controller/get_raw_data_from_postgres_source.py for tasks to queue
+[2022-12-03T09:54:08.768+0000] {logging_mixin.py:137} INFO - 🤪 [2022-12-03T09:54:08.768+0000] {dagbag.py:537} INFO - 🤪 Filling up the DagBag from /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:54:08.777+0000] {logging_mixin.py:137} INFO - 🤪 [2022-12-03T09:54:08.774+0000] {dagbag.py:342} ERROR - 🤪 Failed to import: /airflow/dags/controller/get_raw_data_from_postgres_source.py
+Traceback (most recent call last):
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/airflow/dags/controller/get_raw_data_from_postgres_source.py", line 5, in <module>
+    from airflow.dags.controller import source_controller
+ModuleNotFoundError: No module named 'airflow.dags'
+[2022-12-03T09:54:08.778+0000] {processor.py:768} WARNING - 🤪 No viable dags retrieved from /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:54:08.803+0000] {processor.py:176} INFO - 🤪 Processing /airflow/dags/controller/get_raw_data_from_postgres_source.py took 0.045 seconds
+[2022-12-03T09:54:39.011+0000] {processor.py:154} INFO - 🤪 Started process (PID=53) to work on /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:54:39.014+0000] {processor.py:756} INFO - 🤪 Processing file /airflow/dags/controller/get_raw_data_from_postgres_source.py for tasks to queue
+[2022-12-03T09:54:39.015+0000] {logging_mixin.py:137} INFO - 🤪 [2022-12-03T09:54:39.015+0000] {dagbag.py:537} INFO - 🤪 Filling up the DagBag from /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:54:39.022+0000] {logging_mixin.py:137} INFO - 🤪 [2022-12-03T09:54:39.020+0000] {dagbag.py:342} ERROR - 🤪 Failed to import: /airflow/dags/controller/get_raw_data_from_postgres_source.py
+Traceback (most recent call last):
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/airflow/dags/controller/get_raw_data_from_postgres_source.py", line 5, in <module>
+    from airflow.dags.controller import source_controller
+ModuleNotFoundError: No module named 'airflow.dags'
+[2022-12-03T09:54:39.023+0000] {processor.py:768} WARNING - 🤪 No viable dags retrieved from /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:54:39.047+0000] {processor.py:176} INFO - 🤪 Processing /airflow/dags/controller/get_raw_data_from_postgres_source.py took 0.039 seconds
+[2022-12-03T09:55:09.335+0000] {processor.py:154} INFO - 🤪 Started process (PID=56) to work on /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:55:09.339+0000] {processor.py:756} INFO - 🤪 Processing file /airflow/dags/controller/get_raw_data_from_postgres_source.py for tasks to queue
+[2022-12-03T09:55:09.340+0000] {logging_mixin.py:137} INFO - 🤪 [2022-12-03T09:55:09.340+0000] {dagbag.py:537} INFO - 🤪 Filling up the DagBag from /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:55:09.347+0000] {logging_mixin.py:137} INFO - 🤪 [2022-12-03T09:55:09.345+0000] {dagbag.py:342} ERROR - 🤪 Failed to import: /airflow/dags/controller/get_raw_data_from_postgres_source.py
+Traceback (most recent call last):
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/airflow/dags/controller/get_raw_data_from_postgres_source.py", line 5, in <module>
+    from airflow.dags.controller import source_controller
+ModuleNotFoundError: No module named 'airflow.dags'
+[2022-12-03T09:55:09.348+0000] {processor.py:768} WARNING - 🤪 No viable dags retrieved from /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:55:09.365+0000] {processor.py:176} INFO - 🤪 Processing /airflow/dags/controller/get_raw_data_from_postgres_source.py took 0.033 seconds
+[2022-12-03T09:55:39.664+0000] {processor.py:154} INFO - 🤪 Started process (PID=59) to work on /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:55:39.672+0000] {processor.py:756} INFO - 🤪 Processing file /airflow/dags/controller/get_raw_data_from_postgres_source.py for tasks to queue
+[2022-12-03T09:55:39.673+0000] {logging_mixin.py:137} INFO - 🤪 [2022-12-03T09:55:39.673+0000] {dagbag.py:537} INFO - 🤪 Filling up the DagBag from /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:55:39.680+0000] {logging_mixin.py:137} INFO - 🤪 [2022-12-03T09:55:39.678+0000] {dagbag.py:342} ERROR - 🤪 Failed to import: /airflow/dags/controller/get_raw_data_from_postgres_source.py
+Traceback (most recent call last):
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/airflow/dags/controller/get_raw_data_from_postgres_source.py", line 5, in <module>
+    from airflow.dags.controller import source_controller
+ModuleNotFoundError: No module named 'airflow.dags'
+[2022-12-03T09:55:39.681+0000] {processor.py:768} WARNING - 🤪 No viable dags retrieved from /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:55:39.699+0000] {processor.py:176} INFO - 🤪 Processing /airflow/dags/controller/get_raw_data_from_postgres_source.py took 0.038 seconds
+[2022-12-03T09:56:09.984+0000] {processor.py:154} INFO - 🤪 Started process (PID=62) to work on /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:56:09.990+0000] {processor.py:756} INFO - 🤪 Processing file /airflow/dags/controller/get_raw_data_from_postgres_source.py for tasks to queue
+[2022-12-03T09:56:09.994+0000] {logging_mixin.py:137} INFO - 🤪 [2022-12-03T09:56:09.994+0000] {dagbag.py:537} INFO - 🤪 Filling up the DagBag from /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:56:10.004+0000] {logging_mixin.py:137} INFO - 🤪 [2022-12-03T09:56:10.001+0000] {dagbag.py:342} ERROR - 🤪 Failed to import: /airflow/dags/controller/get_raw_data_from_postgres_source.py
+Traceback (most recent call last):
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/airflow/dags/controller/get_raw_data_from_postgres_source.py", line 5, in <module>
+    from airflow.dags.controller import source_controller
+ModuleNotFoundError: No module named 'airflow.dags'
+[2022-12-03T09:56:10.005+0000] {processor.py:768} WARNING - 🤪 No viable dags retrieved from /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:56:10.031+0000] {processor.py:176} INFO - 🤪 Processing /airflow/dags/controller/get_raw_data_from_postgres_source.py took 0.055 seconds
+[2022-12-03T09:56:40.304+0000] {processor.py:154} INFO - 🤪 Started process (PID=65) to work on /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:56:40.307+0000] {processor.py:756} INFO - 🤪 Processing file /airflow/dags/controller/get_raw_data_from_postgres_source.py for tasks to queue
+[2022-12-03T09:56:40.308+0000] {logging_mixin.py:137} INFO - 🤪 [2022-12-03T09:56:40.308+0000] {dagbag.py:537} INFO - 🤪 Filling up the DagBag from /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:56:40.314+0000] {logging_mixin.py:137} INFO - 🤪 [2022-12-03T09:56:40.313+0000] {dagbag.py:342} ERROR - 🤪 Failed to import: /airflow/dags/controller/get_raw_data_from_postgres_source.py
+Traceback (most recent call last):
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/airflow/dags/controller/get_raw_data_from_postgres_source.py", line 5, in <module>
+    from airflow.dags.controller import source_controller
+ModuleNotFoundError: No module named 'airflow.dags'
+[2022-12-03T09:56:40.315+0000] {processor.py:768} WARNING - 🤪 No viable dags retrieved from /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:56:40.334+0000] {processor.py:176} INFO - 🤪 Processing /airflow/dags/controller/get_raw_data_from_postgres_source.py took 0.033 seconds
+[2022-12-03T09:57:10.625+0000] {processor.py:154} INFO - 🤪 Started process (PID=68) to work on /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:57:10.629+0000] {processor.py:756} INFO - 🤪 Processing file /airflow/dags/controller/get_raw_data_from_postgres_source.py for tasks to queue
+[2022-12-03T09:57:10.630+0000] {logging_mixin.py:137} INFO - 🤪 [2022-12-03T09:57:10.630+0000] {dagbag.py:537} INFO - 🤪 Filling up the DagBag from /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:57:10.637+0000] {logging_mixin.py:137} INFO - 🤪 [2022-12-03T09:57:10.635+0000] {dagbag.py:342} ERROR - 🤪 Failed to import: /airflow/dags/controller/get_raw_data_from_postgres_source.py
+Traceback (most recent call last):
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/airflow/dags/controller/get_raw_data_from_postgres_source.py", line 5, in <module>
+    from airflow.dags.controller import source_controller
+ModuleNotFoundError: No module named 'airflow.dags'
+[2022-12-03T09:57:10.638+0000] {processor.py:768} WARNING - 🤪 No viable dags retrieved from /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:57:10.656+0000] {processor.py:176} INFO - 🤪 Processing /airflow/dags/controller/get_raw_data_from_postgres_source.py took 0.034 seconds
+[2022-12-03T09:57:40.956+0000] {processor.py:154} INFO - 🤪 Started process (PID=71) to work on /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:57:40.960+0000] {processor.py:756} INFO - 🤪 Processing file /airflow/dags/controller/get_raw_data_from_postgres_source.py for tasks to queue
+[2022-12-03T09:57:40.961+0000] {logging_mixin.py:137} INFO - 🤪 [2022-12-03T09:57:40.961+0000] {dagbag.py:537} INFO - 🤪 Filling up the DagBag from /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:57:40.968+0000] {logging_mixin.py:137} INFO - 🤪 [2022-12-03T09:57:40.966+0000] {dagbag.py:342} ERROR - 🤪 Failed to import: /airflow/dags/controller/get_raw_data_from_postgres_source.py
+Traceback (most recent call last):
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/airflow/dags/controller/get_raw_data_from_postgres_source.py", line 5, in <module>
+    from airflow.dags.controller import source_controller
+ModuleNotFoundError: No module named 'airflow.dags'
+[2022-12-03T09:57:40.969+0000] {processor.py:768} WARNING - 🤪 No viable dags retrieved from /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:57:40.990+0000] {processor.py:176} INFO - 🤪 Processing /airflow/dags/controller/get_raw_data_from_postgres_source.py took 0.040 seconds
+[2022-12-03T09:58:11.277+0000] {processor.py:154} INFO - 🤪 Started process (PID=74) to work on /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:58:11.284+0000] {processor.py:756} INFO - 🤪 Processing file /airflow/dags/controller/get_raw_data_from_postgres_source.py for tasks to queue
+[2022-12-03T09:58:11.285+0000] {logging_mixin.py:137} INFO - 🤪 [2022-12-03T09:58:11.285+0000] {dagbag.py:537} INFO - 🤪 Filling up the DagBag from /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:58:11.292+0000] {logging_mixin.py:137} INFO - 🤪 [2022-12-03T09:58:11.290+0000] {dagbag.py:342} ERROR - 🤪 Failed to import: /airflow/dags/controller/get_raw_data_from_postgres_source.py
+Traceback (most recent call last):
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/airflow/dags/controller/get_raw_data_from_postgres_source.py", line 5, in <module>
+    from airflow.dags.controller import source_controller
+ModuleNotFoundError: No module named 'airflow.dags'
+[2022-12-03T09:58:11.293+0000] {processor.py:768} WARNING - 🤪 No viable dags retrieved from /airflow/dags/controller/get_raw_data_from_postgres_source.py
+[2022-12-03T09:58:11.310+0000] {processor.py:176} INFO - 🤪 Processing /airflow/dags/controller/get_raw_data_from_postgres_source.py took 0.037 seconds

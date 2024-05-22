@@ -1,0 +1,84 @@
+[2022-12-09T07:34:31.212+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources scheduled__2022-12-07T19:00:00+00:00 [queued]>
+[2022-12-09T07:34:31.223+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources scheduled__2022-12-07T19:00:00+00:00 [queued]>
+[2022-12-09T07:34:31.224+0000] {taskinstance.py:1362} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-09T07:34:31.225+0000] {taskinstance.py:1363} INFO - 🤪 Starting attempt 2 of 5
+[2022-12-09T07:34:31.226+0000] {taskinstance.py:1364} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-09T07:34:31.239+0000] {taskinstance.py:1383} INFO - 🤪 Executing <Task(PythonOperator): get_raw_data_from_postgres_sources> on 2022-12-07 19:00:00+00:00
+[2022-12-09T07:34:31.242+0000] {standard_task_runner.py:55} INFO - 🤪 Started process 76 to run task
+[2022-12-09T07:34:31.246+0000] {standard_task_runner.py:82} INFO - 🤪 Running: ['airflow', 'tasks', 'run', 'get_raw_data_from_sources', 'get_raw_data_from_postgres_sources', 'scheduled__2022-12-07T19:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/ingest_dwh_daily.py', '--cfg-path', '/tmp/tmpm34md8f8']
+[2022-12-09T07:34:31.248+0000] {standard_task_runner.py:83} INFO - 🤪 Job 4: Subtask get_raw_data_from_postgres_sources
+[2022-12-09T07:34:31.297+0000] {task_command.py:376} INFO - 🤪 Running <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources scheduled__2022-12-07T19:00:00+00:00 [running]> on host 83309ba15041
+[2022-12-09T07:34:31.344+0000] {taskinstance.py:1590} INFO - 🤪 Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=gp.data@galaxy.com.vn
+AIRFLOW_CTX_DAG_OWNER=data_team
+AIRFLOW_CTX_DAG_ID=get_raw_data_from_sources
+AIRFLOW_CTX_TASK_ID=get_raw_data_from_postgres_sources
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-07T19:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-07T19:00:00+00:00
+[2022-12-09T07:34:31.351+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Postgres - Table: users
+[2022-12-09T07:34:31.357+0000] {logging_mixin.py:137} INFO - 🤪 Found 100 records need to be inserted
+[2022-12-09T07:34:31.358+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Postgres to DW - Table: users
+[2022-12-09T07:34:31.360+0000] {taskinstance.py:1851} ERROR - 🤪 Task failed with exception
+Traceback (most recent call last):
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/airflow/dags/processing/ingest_psql_source.py", line 69, in ingest_psql_source
+    insert_data_to_dwh(postgres_handler=postgres_handler, data=data, table=table['table'])
+  File "/airflow/dags/processing/ingest_psql_source.py", line 18, in insert_data_to_dwh
+    postgres_handler.action_db(data=data, table=table, action='insert')
+  File "/airflow/dags/db_handler/master_handler.py", line 73, in action_db
+    return self._push_data(data, table)
+  File "/airflow/dags/db_handler/master_handler.py", line 45, in _push_data
+    cursor = self.dwh_connection.cursor()
+AttributeError: 'PostgresHandler' object has no attribute 'dwh_connection'
+[2022-12-09T07:34:31.366+0000] {taskinstance.py:1401} INFO - 🤪 Marking task as UP_FOR_RETRY. dag_id=get_raw_data_from_sources, task_id=get_raw_data_from_postgres_sources, execution_date=20221207T190000, start_date=20221209T073431, end_date=20221209T073431
+[2022-12-09T07:34:31.379+0000] {standard_task_runner.py:100} ERROR - 🤪 Failed to execute job 4 for task get_raw_data_from_postgres_sources ('PostgresHandler' object has no attribute 'dwh_connection'; 76)
+[2022-12-09T07:34:31.420+0000] {local_task_job.py:159} INFO - 🤪 Task exited with return code 1
+[2022-12-09T07:34:31.436+0000] {taskinstance.py:2623} INFO - 🤪 0 downstream tasks scheduled from follow-on schedule check
+[2022-12-09T17:57:51.466+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources scheduled__2022-12-07T19:00:00+00:00 [queued]>
+[2022-12-09T17:57:51.484+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources scheduled__2022-12-07T19:00:00+00:00 [queued]>
+[2022-12-09T17:57:51.485+0000] {taskinstance.py:1362} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-09T17:57:51.486+0000] {taskinstance.py:1363} INFO - 🤪 Starting attempt 2 of 4
+[2022-12-09T17:57:51.487+0000] {taskinstance.py:1364} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-12-09T17:57:51.510+0000] {taskinstance.py:1383} INFO - 🤪 Executing <Task(PythonOperator): get_raw_data_from_postgres_sources> on 2022-12-07 19:00:00+00:00
+[2022-12-09T17:57:51.515+0000] {standard_task_runner.py:55} INFO - 🤪 Started process 88 to run task
+[2022-12-09T17:57:51.520+0000] {standard_task_runner.py:82} INFO - 🤪 Running: ['airflow', 'tasks', 'run', 'get_raw_data_from_sources', 'get_raw_data_from_postgres_sources', 'scheduled__2022-12-07T19:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/ingest_dwh_daily.py', '--cfg-path', '/tmp/tmpe7j0caat']
+[2022-12-09T17:57:51.522+0000] {standard_task_runner.py:83} INFO - 🤪 Job 4: Subtask get_raw_data_from_postgres_sources
+[2022-12-09T17:57:51.583+0000] {task_command.py:376} INFO - 🤪 Running <TaskInstance: get_raw_data_from_sources.get_raw_data_from_postgres_sources scheduled__2022-12-07T19:00:00+00:00 [running]> on host 31f0fd0ea32a
+[2022-12-09T17:57:51.630+0000] {taskinstance.py:1590} INFO - 🤪 Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=gp.data@galaxy.com.vn
+AIRFLOW_CTX_DAG_OWNER=data_team
+AIRFLOW_CTX_DAG_ID=get_raw_data_from_sources
+AIRFLOW_CTX_TASK_ID=get_raw_data_from_postgres_sources
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-07T19:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-07T19:00:00+00:00
+[2022-12-09T17:57:51.637+0000] {logging_mixin.py:137} INFO - 🤪 Start getting data from source Postgres - Table: users
+[2022-12-09T17:57:51.643+0000] {logging_mixin.py:137} INFO - 🤪 Found 100 records need to be inserted
+[2022-12-09T17:57:51.644+0000] {logging_mixin.py:137} INFO - 🤪 Start ingesting data from source Postgres to DW - Table: users
+[2022-12-09T17:57:51.645+0000] {taskinstance.py:1851} ERROR - 🤪 Task failed with exception
+Traceback (most recent call last):
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/airflow/dags/processing/ingest_psql_source.py", line 69, in ingest_psql_source
+    insert_data_to_dwh(postgres_handler=postgres_handler, data=data, table=table['table'])
+  File "/airflow/dags/processing/ingest_psql_source.py", line 18, in insert_data_to_dwh
+    postgres_handler.action_db(data=data, table=table, action='insert')
+  File "/airflow/dags/db_handler/master_handler.py", line 73, in action_db
+    return self._push_data(data, table)
+  File "/airflow/dags/db_handler/master_handler.py", line 45, in _push_data
+    cursor = self.dwh_connection.cursor()
+AttributeError: 'PostgresHandler' object has no attribute 'dwh_connection'
+[2022-12-09T17:57:51.652+0000] {taskinstance.py:1401} INFO - 🤪 Marking task as UP_FOR_RETRY. dag_id=get_raw_data_from_sources, task_id=get_raw_data_from_postgres_sources, execution_date=20221207T190000, start_date=20221209T175751, end_date=20221209T175751
+[2022-12-09T17:57:51.663+0000] {standard_task_runner.py:100} ERROR - 🤪 Failed to execute job 4 for task get_raw_data_from_postgres_sources ('PostgresHandler' object has no attribute 'dwh_connection'; 88)
+[2022-12-09T17:57:51.694+0000] {local_task_job.py:159} INFO - 🤪 Task exited with return code 1
+[2022-12-09T17:57:51.708+0000] {taskinstance.py:2623} INFO - 🤪 0 downstream tasks scheduled from follow-on schedule check

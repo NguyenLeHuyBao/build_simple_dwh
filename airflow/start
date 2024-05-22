@@ -1,0 +1,7 @@
+#!/usr/env/bin bash
+export AIRFLOW_HOME=/airflow
+pip3 install -r requirements.txt
+airflow db init
+airflow users create --username admin --firstname Bao --lastname Nguyen --role Admin --email admin@baonguyen.com --password admin
+nohup airflow webserver -D
+nohup airflow scheduler

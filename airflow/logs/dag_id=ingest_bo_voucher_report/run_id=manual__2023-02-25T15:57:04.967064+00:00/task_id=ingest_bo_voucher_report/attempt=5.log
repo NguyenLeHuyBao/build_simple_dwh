@@ -1,0 +1,28 @@
+[2023-02-25T16:22:40.993+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: ingest_bo_voucher_report.ingest_bo_voucher_report manual__2023-02-25T15:57:04.967064+00:00 [queued]>
+[2023-02-25T16:22:41.001+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: ingest_bo_voucher_report.ingest_bo_voucher_report manual__2023-02-25T15:57:04.967064+00:00 [queued]>
+[2023-02-25T16:22:41.002+0000] {taskinstance.py:1362} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2023-02-25T16:22:41.003+0000] {taskinstance.py:1363} INFO - 🤪 Starting attempt 5 of 8
+[2023-02-25T16:22:41.004+0000] {taskinstance.py:1364} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2023-02-25T16:22:41.017+0000] {taskinstance.py:1383} INFO - 🤪 Executing <Task(PythonOperator): ingest_bo_voucher_report> on 2023-02-25 15:57:04.967064+00:00
+[2023-02-25T16:22:41.020+0000] {standard_task_runner.py:55} INFO - 🤪 Started process 421 to run task
+[2023-02-25T16:22:41.026+0000] {standard_task_runner.py:82} INFO - 🤪 Running: ['airflow', 'tasks', 'run', 'ingest_bo_voucher_report', 'ingest_bo_voucher_report', 'manual__2023-02-25T15:57:04.967064+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/ingest_bo_voucher_report.py', '--cfg-path', '/tmp/tmpprrgg81n']
+[2023-02-25T16:22:41.028+0000] {standard_task_runner.py:83} INFO - 🤪 Job 7: Subtask ingest_bo_voucher_report
+[2023-02-25T16:22:41.085+0000] {task_command.py:376} INFO - 🤪 Running <TaskInstance: ingest_bo_voucher_report.ingest_bo_voucher_report manual__2023-02-25T15:57:04.967064+00:00 [running]> on host 6854c1cbd5eb
+[2023-02-25T16:22:41.140+0000] {taskinstance.py:1590} INFO - 🤪 Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=gp.data@galaxy.com.vn
+AIRFLOW_CTX_DAG_OWNER=data_team
+AIRFLOW_CTX_DAG_ID=ingest_bo_voucher_report
+AIRFLOW_CTX_TASK_ID=ingest_bo_voucher_report
+AIRFLOW_CTX_EXECUTION_DATE=2023-02-25T15:57:04.967064+00:00
+AIRFLOW_CTX_TRY_NUMBER=5
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-02-25T15:57:04.967064+00:00
+[2023-02-25T16:22:41.152+0000] {logging_mixin.py:137} INFO - 🤪 pathhh /airflow/dags/config/
+[2023-02-25T16:22:45.323+0000] {logging_mixin.py:137} INFO - 🤪 Error: invalid input syntax for type integer: ""
+LINE 1: ...0230101','20230101','202301','total_sold','daily','',0),('20...
+                                                             ^
+[2023-02-25T16:22:45.325+0000] {python.py:177} INFO - 🤪 Done. Returned value was: None
+[2023-02-25T16:22:45.334+0000] {taskinstance.py:1401} INFO - 🤪 Marking task as SUCCESS. dag_id=ingest_bo_voucher_report, task_id=ingest_bo_voucher_report, execution_date=20230225T155704, start_date=20230225T162240, end_date=20230225T162245
+[2023-02-25T16:22:45.367+0000] {local_task_job.py:159} INFO - 🤪 Task exited with return code 0
+[2023-02-25T16:22:45.385+0000] {taskinstance.py:2623} INFO - 🤪 0 downstream tasks scheduled from follow-on schedule check

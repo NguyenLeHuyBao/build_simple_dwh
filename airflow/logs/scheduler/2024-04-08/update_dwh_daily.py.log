@@ -1,0 +1,32 @@
+[2024-04-08T09:12:51.533+0000] {processor.py:154} INFO - 🤪 Started process (PID=47) to work on /airflow/dags/update_dwh_daily.py
+[2024-04-08T09:12:51.535+0000] {processor.py:756} INFO - 🤪 Processing file /airflow/dags/update_dwh_daily.py for tasks to queue
+[2024-04-08T09:12:51.536+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:12:51.536+0000] {dagbag.py:537} INFO - 🤪 Filling up the DagBag from /airflow/dags/update_dwh_daily.py
+[2024-04-08T09:12:51.926+0000] {processor.py:766} INFO - 🤪 DAG(s) dict_keys(['update_dwh_daily']) retrieved from /airflow/dags/update_dwh_daily.py
+[2024-04-08T09:12:52.052+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:12:52.051+0000] {manager.py:507} INFO - 🤪 Created Permission View: can delete on DAG:update_dwh_daily
+[2024-04-08T09:12:52.069+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:12:52.069+0000] {manager.py:507} INFO - 🤪 Created Permission View: can read on DAG:update_dwh_daily
+[2024-04-08T09:12:52.081+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:12:52.080+0000] {manager.py:507} INFO - 🤪 Created Permission View: can edit on DAG:update_dwh_daily
+[2024-04-08T09:12:52.082+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:12:52.082+0000] {dag.py:2585} INFO - 🤪 Sync 1 DAGs
+[2024-04-08T09:12:52.102+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:12:52.101+0000] {dag.py:2606} INFO - 🤪 Creating ORM DAG for update_dwh_daily
+[2024-04-08T09:12:52.118+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:12:52.118+0000] {dag.py:3336} INFO - 🤪 Setting next_dagrun for update_dwh_daily to 2024-04-07T02:30:00+00:00, run_after=2024-04-08T02:30:00+00:00
+[2024-04-08T09:12:52.143+0000] {processor.py:176} INFO - 🤪 Processing /airflow/dags/update_dwh_daily.py took 0.615 seconds
+[2024-04-08T09:13:23.203+0000] {processor.py:154} INFO - 🤪 Started process (PID=55) to work on /airflow/dags/update_dwh_daily.py
+[2024-04-08T09:13:23.205+0000] {processor.py:756} INFO - 🤪 Processing file /airflow/dags/update_dwh_daily.py for tasks to queue
+[2024-04-08T09:13:23.206+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:13:23.206+0000] {dagbag.py:537} INFO - 🤪 Filling up the DagBag from /airflow/dags/update_dwh_daily.py
+[2024-04-08T09:13:23.614+0000] {processor.py:766} INFO - 🤪 DAG(s) dict_keys(['update_dwh_daily']) retrieved from /airflow/dags/update_dwh_daily.py
+[2024-04-08T09:13:23.637+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:13:23.637+0000] {dag.py:2585} INFO - 🤪 Sync 1 DAGs
+[2024-04-08T09:13:23.659+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:13:23.659+0000] {dag.py:3336} INFO - 🤪 Setting next_dagrun for update_dwh_daily to 2024-04-07T02:30:00+00:00, run_after=2024-04-08T02:30:00+00:00
+[2024-04-08T09:13:23.686+0000] {processor.py:176} INFO - 🤪 Processing /airflow/dags/update_dwh_daily.py took 0.488 seconds
+[2024-04-08T09:13:54.289+0000] {processor.py:154} INFO - 🤪 Started process (PID=59) to work on /airflow/dags/update_dwh_daily.py
+[2024-04-08T09:13:54.295+0000] {processor.py:756} INFO - 🤪 Processing file /airflow/dags/update_dwh_daily.py for tasks to queue
+[2024-04-08T09:13:54.301+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:13:54.300+0000] {dagbag.py:537} INFO - 🤪 Filling up the DagBag from /airflow/dags/update_dwh_daily.py
+[2024-04-08T09:13:55.813+0000] {processor.py:766} INFO - 🤪 DAG(s) dict_keys(['update_dwh_daily']) retrieved from /airflow/dags/update_dwh_daily.py
+[2024-04-08T09:13:55.957+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:13:55.957+0000] {dag.py:2585} INFO - 🤪 Sync 1 DAGs
+[2024-04-08T09:13:56.046+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:13:56.046+0000] {dag.py:3336} INFO - 🤪 Setting next_dagrun for update_dwh_daily to 2024-04-07T02:30:00+00:00, run_after=2024-04-08T02:30:00+00:00
+[2024-04-08T09:13:56.114+0000] {processor.py:176} INFO - 🤪 Processing /airflow/dags/update_dwh_daily.py took 1.830 seconds
+[2024-04-08T09:14:26.392+0000] {processor.py:154} INFO - 🤪 Started process (PID=63) to work on /airflow/dags/update_dwh_daily.py
+[2024-04-08T09:14:26.397+0000] {processor.py:756} INFO - 🤪 Processing file /airflow/dags/update_dwh_daily.py for tasks to queue
+[2024-04-08T09:14:26.401+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:14:26.400+0000] {dagbag.py:537} INFO - 🤪 Filling up the DagBag from /airflow/dags/update_dwh_daily.py
+[2024-04-08T09:14:27.014+0000] {processor.py:766} INFO - 🤪 DAG(s) dict_keys(['update_dwh_daily']) retrieved from /airflow/dags/update_dwh_daily.py
+[2024-04-08T09:14:27.050+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:14:27.049+0000] {dag.py:2585} INFO - 🤪 Sync 1 DAGs
+[2024-04-08T09:14:27.100+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:14:27.100+0000] {dag.py:3336} INFO - 🤪 Setting next_dagrun for update_dwh_daily to 2024-04-07T02:30:00+00:00, run_after=2024-04-08T02:30:00+00:00
+[2024-04-08T09:14:27.148+0000] {processor.py:176} INFO - 🤪 Processing /airflow/dags/update_dwh_daily.py took 0.768 seconds

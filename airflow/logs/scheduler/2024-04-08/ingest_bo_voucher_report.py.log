@@ -1,0 +1,32 @@
+[2024-04-08T09:12:49.654+0000] {processor.py:154} INFO - 🤪 Started process (PID=46) to work on /airflow/dags/ingest_bo_voucher_report.py
+[2024-04-08T09:12:49.656+0000] {processor.py:756} INFO - 🤪 Processing file /airflow/dags/ingest_bo_voucher_report.py for tasks to queue
+[2024-04-08T09:12:49.658+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:12:49.657+0000] {dagbag.py:537} INFO - 🤪 Filling up the DagBag from /airflow/dags/ingest_bo_voucher_report.py
+[2024-04-08T09:12:50.147+0000] {processor.py:766} INFO - 🤪 DAG(s) dict_keys(['ingest_bo_voucher_report']) retrieved from /airflow/dags/ingest_bo_voucher_report.py
+[2024-04-08T09:12:50.265+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:12:50.265+0000] {manager.py:507} INFO - 🤪 Created Permission View: can delete on DAG:ingest_bo_voucher_report
+[2024-04-08T09:12:50.283+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:12:50.283+0000] {manager.py:507} INFO - 🤪 Created Permission View: can read on DAG:ingest_bo_voucher_report
+[2024-04-08T09:12:50.293+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:12:50.293+0000] {manager.py:507} INFO - 🤪 Created Permission View: can edit on DAG:ingest_bo_voucher_report
+[2024-04-08T09:12:50.294+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:12:50.294+0000] {dag.py:2585} INFO - 🤪 Sync 1 DAGs
+[2024-04-08T09:12:50.311+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:12:50.311+0000] {dag.py:2606} INFO - 🤪 Creating ORM DAG for ingest_bo_voucher_report
+[2024-04-08T09:12:50.330+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:12:50.330+0000] {dag.py:3336} INFO - 🤪 Setting next_dagrun for ingest_bo_voucher_report to 2024-04-07T01:00:00+00:00, run_after=2024-04-08T01:00:00+00:00
+[2024-04-08T09:12:50.363+0000] {processor.py:176} INFO - 🤪 Processing /airflow/dags/ingest_bo_voucher_report.py took 0.712 seconds
+[2024-04-08T09:13:20.490+0000] {processor.py:154} INFO - 🤪 Started process (PID=54) to work on /airflow/dags/ingest_bo_voucher_report.py
+[2024-04-08T09:13:20.492+0000] {processor.py:756} INFO - 🤪 Processing file /airflow/dags/ingest_bo_voucher_report.py for tasks to queue
+[2024-04-08T09:13:20.493+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:13:20.493+0000] {dagbag.py:537} INFO - 🤪 Filling up the DagBag from /airflow/dags/ingest_bo_voucher_report.py
+[2024-04-08T09:13:20.922+0000] {processor.py:766} INFO - 🤪 DAG(s) dict_keys(['ingest_bo_voucher_report']) retrieved from /airflow/dags/ingest_bo_voucher_report.py
+[2024-04-08T09:13:20.947+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:13:20.946+0000] {dag.py:2585} INFO - 🤪 Sync 1 DAGs
+[2024-04-08T09:13:20.968+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:13:20.968+0000] {dag.py:3336} INFO - 🤪 Setting next_dagrun for ingest_bo_voucher_report to 2024-04-07T01:00:00+00:00, run_after=2024-04-08T01:00:00+00:00
+[2024-04-08T09:13:20.993+0000] {processor.py:176} INFO - 🤪 Processing /airflow/dags/ingest_bo_voucher_report.py took 0.507 seconds
+[2024-04-08T09:13:51.979+0000] {processor.py:154} INFO - 🤪 Started process (PID=58) to work on /airflow/dags/ingest_bo_voucher_report.py
+[2024-04-08T09:13:51.982+0000] {processor.py:756} INFO - 🤪 Processing file /airflow/dags/ingest_bo_voucher_report.py for tasks to queue
+[2024-04-08T09:13:51.986+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:13:51.985+0000] {dagbag.py:537} INFO - 🤪 Filling up the DagBag from /airflow/dags/ingest_bo_voucher_report.py
+[2024-04-08T09:13:52.942+0000] {processor.py:766} INFO - 🤪 DAG(s) dict_keys(['ingest_bo_voucher_report']) retrieved from /airflow/dags/ingest_bo_voucher_report.py
+[2024-04-08T09:13:52.977+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:13:52.976+0000] {dag.py:2585} INFO - 🤪 Sync 1 DAGs
+[2024-04-08T09:13:53.018+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:13:53.018+0000] {dag.py:3336} INFO - 🤪 Setting next_dagrun for ingest_bo_voucher_report to 2024-04-07T01:00:00+00:00, run_after=2024-04-08T01:00:00+00:00
+[2024-04-08T09:13:53.045+0000] {processor.py:176} INFO - 🤪 Processing /airflow/dags/ingest_bo_voucher_report.py took 1.071 seconds
+[2024-04-08T09:14:23.391+0000] {processor.py:154} INFO - 🤪 Started process (PID=62) to work on /airflow/dags/ingest_bo_voucher_report.py
+[2024-04-08T09:14:23.395+0000] {processor.py:756} INFO - 🤪 Processing file /airflow/dags/ingest_bo_voucher_report.py for tasks to queue
+[2024-04-08T09:14:23.396+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:14:23.396+0000] {dagbag.py:537} INFO - 🤪 Filling up the DagBag from /airflow/dags/ingest_bo_voucher_report.py
+[2024-04-08T09:14:24.062+0000] {processor.py:766} INFO - 🤪 DAG(s) dict_keys(['ingest_bo_voucher_report']) retrieved from /airflow/dags/ingest_bo_voucher_report.py
+[2024-04-08T09:14:24.089+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:14:24.089+0000] {dag.py:2585} INFO - 🤪 Sync 1 DAGs
+[2024-04-08T09:14:24.120+0000] {logging_mixin.py:137} INFO - 🤪 [2024-04-08T09:14:24.119+0000] {dag.py:3336} INFO - 🤪 Setting next_dagrun for ingest_bo_voucher_report to 2024-04-07T01:00:00+00:00, run_after=2024-04-08T01:00:00+00:00
+[2024-04-08T09:14:24.150+0000] {processor.py:176} INFO - 🤪 Processing /airflow/dags/ingest_bo_voucher_report.py took 0.762 seconds

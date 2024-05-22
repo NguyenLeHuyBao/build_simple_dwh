@@ -1,0 +1,51 @@
+[2022-11-30T07:43:12.416+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_mysql_sources manual__2022-11-30T05:03:14.223869+00:00 [queued]>
+[2022-11-30T07:43:12.425+0000] {taskinstance.py:1165} INFO - 🤪 Dependencies all met for <TaskInstance: get_raw_data_from_sources.get_raw_data_from_mysql_sources manual__2022-11-30T05:03:14.223869+00:00 [queued]>
+[2022-11-30T07:43:12.426+0000] {taskinstance.py:1362} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-11-30T07:43:12.427+0000] {taskinstance.py:1363} INFO - 🤪 Starting attempt 11 of 12
+[2022-11-30T07:43:12.427+0000] {taskinstance.py:1364} INFO - 🤪 
+--------------------------------------------------------------------------------
+[2022-11-30T07:43:12.441+0000] {taskinstance.py:1383} INFO - 🤪 Executing <Task(PythonOperator): get_raw_data_from_mysql_sources> on 2022-11-30 05:03:14.223869+00:00
+[2022-11-30T07:43:12.445+0000] {standard_task_runner.py:55} INFO - 🤪 Started process 916 to run task
+[2022-11-30T07:43:12.450+0000] {standard_task_runner.py:82} INFO - 🤪 Running: ['airflow', 'tasks', 'run', 'get_raw_data_from_sources', 'get_raw_data_from_mysql_sources', 'manual__2022-11-30T05:03:14.223869+00:00', '--job-id', '66', '--raw', '--subdir', 'DAGS_FOLDER/get_data_from_sources.py', '--cfg-path', '/tmp/tmpgrnz7nj2']
+[2022-11-30T07:43:12.452+0000] {standard_task_runner.py:83} INFO - 🤪 Job 66: Subtask get_raw_data_from_mysql_sources
+[2022-11-30T07:43:12.506+0000] {task_command.py:376} INFO - 🤪 Running <TaskInstance: get_raw_data_from_sources.get_raw_data_from_mysql_sources manual__2022-11-30T05:03:14.223869+00:00 [running]> on host 298e6b8d1257
+[2022-11-30T07:43:12.576+0000] {taskinstance.py:1590} INFO - 🤪 Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=gp.data@galaxy.com.vn
+AIRFLOW_CTX_DAG_OWNER=data_team
+AIRFLOW_CTX_DAG_ID=get_raw_data_from_sources
+AIRFLOW_CTX_TASK_ID=get_raw_data_from_mysql_sources
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-30T05:03:14.223869+00:00
+AIRFLOW_CTX_TRY_NUMBER=11
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-11-30T05:03:14.223869+00:00
+[2022-11-30T07:43:12.581+0000] {logging_mixin.py:137} INFO - 🤪 connect succeeded
+[2022-11-30T07:43:12.589+0000] {taskinstance.py:1851} ERROR - 🤪 Task failed with exception
+Traceback (most recent call last):
+  File "/opt/bitnami/python/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 969, in _finalize_columns_and_data
+    columns = _validate_or_indexify_columns(contents, columns)
+  File "/opt/bitnami/python/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 1017, in _validate_or_indexify_columns
+    raise AssertionError(
+AssertionError: 5 columns passed, passed data had 6 columns
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/opt/bitnami/python/lib/python3.8/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/airflow/dags/controller/get_raw_data_from_mysql_source.py", line 21, in get_raw_data_from_mysql_source
+    df = pd.DataFrame(records, columns=['name', 'email', 'mobile', 'created_at',
+  File "/opt/bitnami/python/lib/python3.8/site-packages/pandas/core/frame.py", line 745, in __init__
+    arrays, columns, index = nested_data_to_arrays(
+  File "/opt/bitnami/python/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 510, in nested_data_to_arrays
+    arrays, columns = to_arrays(data, columns, dtype=dtype)
+  File "/opt/bitnami/python/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 875, in to_arrays
+    content, columns = _finalize_columns_and_data(arr, columns, dtype)
+  File "/opt/bitnami/python/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 972, in _finalize_columns_and_data
+    raise ValueError(err) from err
+ValueError: 5 columns passed, passed data had 6 columns
+[2022-11-30T07:43:12.599+0000] {taskinstance.py:1401} INFO - 🤪 Marking task as UP_FOR_RETRY. dag_id=get_raw_data_from_sources, task_id=get_raw_data_from_mysql_sources, execution_date=20221130T050314, start_date=20221130T074312, end_date=20221130T074312
+[2022-11-30T07:43:12.612+0000] {standard_task_runner.py:100} ERROR - 🤪 Failed to execute job 66 for task get_raw_data_from_mysql_sources (5 columns passed, passed data had 6 columns; 916)
+[2022-11-30T07:43:12.623+0000] {local_task_job.py:159} INFO - 🤪 Task exited with return code 1
+[2022-11-30T07:43:12.639+0000] {taskinstance.py:2623} INFO - 🤪 0 downstream tasks scheduled from follow-on schedule check
